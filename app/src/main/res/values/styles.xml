@@ -1,0 +1,72 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+    <!--</style>-->
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme.Base"></style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Actionbar color -->
+        <item name="colorPrimary">@color/blue_618ff8</item>
+        <!--Status bar color-->
+        <item name="colorPrimaryDark">@color/blue_618ff8</item>
+        <!--Window color-->
+        <!--<item name="android:windowBackground">@color/dim_foreground_material_dark</item>-->
+    </style>
+    <style name="AppRedTheme" parent="AppTheme.Base"></style>
+
+    <style name="AppGrayTheme" parent="AppTheme.Base">
+    <!-- Actionbar color -->
+    <item name="colorPrimary">@color/gray_f2f2f2</item>
+    <!--Status bar color-->
+    <item name="colorPrimaryDark">@color/gray_f2f2f2</item>
+    <!--Window color-->
+</style>
+
+    <style name="AppBlueTheme" parent="AppTheme.Base">
+        <!-- Actionbar color -->
+        <item name="colorPrimary">@color/blue_618ff8</item>
+        <!--Status bar color-->
+        <item name="colorPrimaryDark">@color/blue_618ff8</item>
+        <!--Window color-->
+    </style>
+
+    <style name="AppWhiteTheme" parent="AppTheme.Base">
+        <!-- Actionbar color -->
+        <item name="colorPrimary">@color/white_ffffff</item>
+        <!--Status bar color-->
+        <item name="colorPrimaryDark">@color/white_ffffff</item>
+        <!--Window color-->
+    </style>
+
+    <style name="text_22_black_333333" parent="WrapWrap">
+        <item name="android:textSize">@dimen/text_22</item>
+        <item name="android:textColor">@color/black_333333</item>
+    </style>
+
+    <style name="text_12_red_e74747" parent="WrapWrap">
+    <item name="android:textSize">@dimen/text_12</item>
+    <item name="android:textColor">@color/red_e74747</item>
+</style>
+    <style name="text_12_blue_618ff8" parent="WrapWrap">
+        <item name="android:textSize">@dimen/text_12</item>
+        <item name="android:textColor">@color/blue_618ff8</item>
+    </style>
+
+    <style name="edit_text">
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textSize">@dimen/text_14</item>
+        <item name="android:textColorHint">@color/gray_808080</item>
+        <item name="android:background">@color/white_ffffff</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">@dimen/margin_10</item>
+    </style>
+
+</resources>

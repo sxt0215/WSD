@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/titlebar_white"
+         />
+
+    <ImageView
+        style="@style/WrapWrap"
+        android:src="@drawable/logo"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_40"/>
+
+    <LinearLayout
+        style="@style/MatchWrap.Vertical"
+        android:layout_marginTop="@dimen/margin_60"
+        android:layout_marginLeft="@dimen/margin_30"
+        android:layout_marginRight="@dimen/margin_30"
+        >
+
+        <LinearLayout style="@style/MatchWrap.Horizontal"
+            android:layout_height="@dimen/margin_60"
+            >
+
+            <TextView
+                style="@style/text_22_black_333333"
+                android:layout_gravity="center_vertical"
+                android:text="@string/use_number" />
+
+            <com.jyph.wsdapp.common.utils.view.ClearEditText
+                android:id="@+id/et_login_account"
+                style="@style/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:digits="1234567890."
+                android:imeOptions="actionNext"
+                android:paddingLeft="@dimen/margin_10"
+                android:nextFocusForward="@+id/et_login_password" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:background="@color/gray_ededed"></View>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_60"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/text_22_black_333333"
+                android:layout_gravity="center_vertical"
+                android:text="@string/use_code" />
+
+            <EditText
+                android:id="@+id/et_sms_code"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                style="@style/edit_text"
+                android:inputType="numberSigned"
+                android:maxLength="6"
+                />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/margin_30"
+                android:layout_gravity="center_vertical"
+                android:background="@color/gray_f2f2f2" />
+            <Button
+                android:id="@+id/btn_getcode"
+                style="@style/text_12_red_e74747"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="@null"
+                android:text="@string/get_code" />
+        </LinearLayout>
+
+
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:background="@color/gray_ededed"></View>
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_login"-->
+            <!--style="@style/button"-->
+            <!--android:layout_width="@dimen/margin_190"-->
+            <!--android:layout_height="@dimen/margin_40"-->
+            <!--android:background="@drawable/btn_red_ed7e84"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:text="@string/login"-->
+            <!--android:onClick="goLogin"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="@dimen/text_15" />-->
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
