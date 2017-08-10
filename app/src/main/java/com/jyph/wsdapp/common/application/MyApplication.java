@@ -3,6 +3,7 @@ package com.jyph.wsdapp.common.application;
 import android.app.Application;
 import android.util.Log;
 
+import com.gdkj.pushlibrary.GDJPushManager;
 import com.jyph.wsdapp.common.sharepreference.MySharePreference;
 import com.jyph.wsdapp.common.utils.LogMe;
 
@@ -36,6 +37,10 @@ public class MyApplication extends Application implements Thread.UncaughtExcepti
     @Override
     public void onCreate() {
         super.onCreate();
+
+        GDJPushManager.getInstance().init(this,true);
+        GDJPushManager.getInstance().setAlias("WSD");
+
 //        UMShareAPI.get(this);
 //        LeakCanary.install(this);
         sharePreference = MySharePreference.newInstance(getApplicationContext());

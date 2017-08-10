@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/jyph_wsd.iml" filepath="$PROJECT_DIR$/jyph_wsd.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pushlibrary/pushlibrary.iml" filepath="$PROJECT_DIR$/pushlibrary/pushlibrary.iml" />
     </modules>
   </component>
 </project>
