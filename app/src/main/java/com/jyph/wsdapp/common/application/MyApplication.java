@@ -1,19 +1,19 @@
 package com.jyph.wsdapp.common.application;
 
 import android.app.Application;
+import android.content.Context;
 import android.util.Log;
 
 import com.gdkj.pushlibrary.GDJPushManager;
 import com.jyph.wsdapp.common.sharepreference.MySharePreference;
 import com.jyph.wsdapp.common.utils.LogMe;
-
+import com.tencent.bugly.crashreport.CrashReport;
 
 
 /**
  * Created by creditcloud on 7/26/16.
  */
 public class MyApplication extends Application implements Thread.UncaughtExceptionHandler {
-    private static final String TAG = "JIGUANG-Example";
     private UserInfo userInfo;
     private MySharePreference sharePreference;
     private boolean isGestureOff = false;//表示手势密码开启
@@ -37,10 +37,6 @@ public class MyApplication extends Application implements Thread.UncaughtExcepti
     @Override
     public void onCreate() {
         super.onCreate();
-
-        GDJPushManager.getInstance().init(this,true);
-        GDJPushManager.getInstance().setAlias("WSD");
-
 //        UMShareAPI.get(this);
 //        LeakCanary.install(this);
         sharePreference = MySharePreference.newInstance(getApplicationContext());
@@ -51,7 +47,29 @@ public class MyApplication extends Application implements Thread.UncaughtExcepti
         LogMe.e("application", "token:" + sharePreference.getToken());
         LogMe.e("application", "accountStatus:" + sharePreference.getAccountStatus());
         LogMe.e("application", "userEmail:" + sharePreference.getUserEmail());
+
+        GDJPushManager.getInstance().init(this,true);
+        GDJPushManager.getInstance().setAlias("WSD");
+        /**
+         * Bugly 腾讯  收集crash日志
+         * 第三个参数为SDK调试模式开关，调试模式的行为特性如下：
+         * 输出详细的Bugly SDK的Log；
+         * 每一条Crash都会被立即上报；
+         * 自定义日志将会在Logcat中输出。
+         * 建议在测试阶段建议设置成true，发布时设置为false。
+         * */
+        CrashReport.initCrashReport(getApplicationContext(), "f0f87f9764", true);
+        //通过“AndroidManifest.xml”配置后的初始化方法如下：
+        CrashReport.initCrashReport(getApplicationContext());
+//        CrashReport.testJavaCrash();
         mInstance = this;
+    }
+
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+//        Multidex.install(this);
     }
 
     @Override

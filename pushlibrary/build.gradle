@@ -12,7 +12,7 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-        manifestPlaceholders = [JPUSH_KEY_VALUE: 'a33e8b15b4f41da326594141 ']
+        manifestPlaceholders = [JPUSH_KEY_VALUE: 'a33e8b15b4f41da326594141']
     }
     buildTypes {
         release {

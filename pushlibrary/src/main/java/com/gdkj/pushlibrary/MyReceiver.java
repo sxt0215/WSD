@@ -83,6 +83,7 @@ public class MyReceiver extends BroadcastReceiver {
         if (!login && isForeground) {//没有登陸，且是前台状态
             return;
         }
+
         Intent intent = new Intent();
         //设置 Intent 的动作
         intent.setAction("com.gdkj.gdfollowup.login");

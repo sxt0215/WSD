@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jyph.wsdapp" >
 
+
+    <uses-permission android:name="android.permission.READ_LOGS" />
     <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -45,6 +47,25 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
+
+        <!-- 配置APP ID -->
+        <meta-data
+            android:name="BUGLY_APPID"
+            android:value="f0f87f9764" />
+        <!-- 配置APP版本号  不同于“android:versionName”，“BUGLY_APP_VERSION”配置的是Bugly平台的APP版本号。-->
+        <meta-data
+            android:name="BUGLY_APP_VERSION"
+            android:value="1.0" />
+        <!-- 配置APP渠道号 -->
+        <!--<meta-data-->
+            <!--android:name="BUGLY_APP_CHANNEL"-->
+            <!--android:value="<APP_Channel>" />-->
+        <!-- 配置Bugly调试模式（true或者false）-->
+        <meta-data
+            android:name="BUGLY_ENABLE_DEBUG"
+            android:value="true" />
+
+
         <activity
             android:name="com.jyph.wsdapp.mvp.guide.SplashActivity"
             android:launchMode="singleTop"

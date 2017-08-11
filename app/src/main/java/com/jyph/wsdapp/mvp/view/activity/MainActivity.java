@@ -29,6 +29,7 @@ import android.widget.Toast;
 import com.jyph.wsdapp.R;
 import com.jyph.wsdapp.basemvp.view.base.BaseActivity;
 import com.jyph.wsdapp.common.location.LocationUtils;
+import com.jyph.wsdapp.common.utils.LogMe;
 import com.jyph.wsdapp.common.utils.phoneinfo.ContactInfo;
 import com.jyph.wsdapp.mvp.Presenter.AddressPresenter;
 
@@ -39,6 +40,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 
+import cn.jpush.android.api.JPushInterface;
 import pub.devrel.easypermissions.AppSettingsDialog;
 import pub.devrel.easypermissions.EasyPermissions;
 
@@ -67,6 +69,8 @@ public class MainActivity extends BaseActivity<AddressPresenter> implements View
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         context = getApplicationContext();
+
+        LogMe.d("RegistrationID ==》",JPushInterface.getRegistrationID(getApplicationContext()));
         initView();
         requestPermissions(); // 位置 相机 通讯录
 
@@ -140,7 +144,8 @@ public class MainActivity extends BaseActivity<AddressPresenter> implements View
                 ed_phonebook_call.setText(ContactInfo.getCallInPhone(getApplication()));
                 break;
             case R.id.tv_phonebook_sms:
-                ed_phonebook_sms.setText(ContactInfo.getSmdInPhone(getApplication()));
+                ed_phonebook_sms.setText(ContactInfo.getSmsInPhone(getApplication()));
+                LogMe.d("短信内容",ContactInfo.getSmsInPhone(getApplication()));
                 break;
             case R.id.left_img:
                 startActivity(new Intent(this,HomeActivity.class));
@@ -184,7 +189,7 @@ public class MainActivity extends BaseActivity<AddressPresenter> implements View
                 Manifest.permission.CAMERA,
                 Manifest.permission.READ_CONTACTS,
                 Manifest.permission.READ_CALL_LOG,
-                Manifest.permission_group.SMS);
+                Manifest.permission.READ_SMS);
     }
     /**
      * 权限的结果回调函数
