@@ -46,6 +46,57 @@
         <!--Window color-->
     </style>
 
+    <!--文字-->
+    <style name="text_13_blue_436dc7" parent="WrapWrap">
+        <item name="android:textSize">@dimen/text_13</item>
+        <item name="android:textColor">@color/blue_436dc7</item>
+    </style>
+    <style name="text_10_black_5a5a5a" parent="WrapWrap">
+        <item name="android:textSize">@dimen/text_10</item>
+        <item name="android:textColor">@color/black_5a5a5a</item>
+    </style>
+    <style name="text_12_gray_bebebe" parent="WrapWrap">
+        <item name="android:textSize">@dimen/text_12</item>
+        <item name="android:textColor">@color/gray_bebebe</item>
+    </style>
+    <style name="text_12_black_5a5a5a" parent="WrapWrap">
+        <item name="android:textSize">@dimen/text_12</item>
+        <item name="android:textColor">@color/black_5a5a5a</item>
+    </style>
+    <style name="text_10_blue_436dc7" parent="WrapWrap">
+        <item name="android:textSize">@dimen/text_10</item>
+        <item name="android:textColor">@color/blue_436dc7</item>
+    </style>
+    <style name="text_16_white" parent="WrapWrap">
+        <item name="android:textSize">@dimen/text_16</item>
+        <item name="android:textColor">@color/white_ffffff</item>
+    </style>
+    <style name="text_14_black_000000" parent="WrapWrap">
+        <item name="android:textSize">@dimen/text_14</item>
+        <item name="android:textColor">@color/black_000000</item>
+    </style>
+    <style name="text_17_black_000000" parent="WrapWrap">
+        <item name="android:textSize">@dimen/text_17</item>
+        <item name="android:textColor">@color/black_000000</item>
+    </style>
+
+    <!--特殊的-->
+    <style name="text_12_gray_969696" parent="MatchHeight_30">
+        <item name="android:textSize">@dimen/text_12</item>
+        <item name="android:textColor">@color/gray_969696</item>
+        <item name="android:background">@color/gray_efeff4</item>
+    </style>
+    <style name="text_13_black_000000" parent="MatchHeight_44">
+        <item name="android:textSize">@dimen/text_13</item>
+        <item name="android:textColor">@color/black_000000</item>
+    </style>
+
+
+
+
+
+
+
     <style name="text_22_black_333333" parent="WrapWrap">
         <item name="android:textSize">@dimen/text_22</item>
         <item name="android:textColor">@color/black_333333</item>
@@ -59,11 +110,19 @@
         <item name="android:textSize">@dimen/text_12</item>
         <item name="android:textColor">@color/blue_618ff8</item>
     </style>
+    <style name="text_12_blue_436dc7" parent="WrapWrap">
+        <item name="android:textSize">@dimen/text_12</item>
+        <item name="android:textColor">@color/blue_436dc7</item>
+    </style>
+    <style name="text_10_yellow_ffb319" parent="WrapWrap">
+        <item name="android:textSize">@dimen/text_10</item>
+        <item name="android:textColor">@color/yellow_ffb319</item>
+    </style>
 
     <style name="edit_text">
         <item name="android:gravity">left|center_vertical</item>
-        <item name="android:textSize">@dimen/text_14</item>
-        <item name="android:textColorHint">@color/gray_808080</item>
+        <item name="android:textSize">@dimen/text_13</item>
+        <item name="android:textColorHint">@color/gray_bebebe</item>
         <item name="android:background">@color/white_ffffff</item>
         <item name="android:singleLine">true</item>
         <item name="android:drawablePadding">@dimen/margin_10</item>

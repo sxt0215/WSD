@@ -2,7 +2,45 @@
     <string name="app_name">微闪贷</string>
     <string name="get_code">获取验证码</string>
     <string name="use_number">手机号</string>
-    <string name="use_code">验证码</string>
+    <string name="img_code">图形验证码</string>
+    <string name="sms_code">验证码</string>
+    <string name="call_explain">没有收到短信验证码？</string>
+    <string name="call_pwd">点击使用电话播报密码</string>
+    <string name="agreement_explain">登录则默认接受</string>
+    <string name="agreement">《用户协议》</string>
+    <string name="login">登录</string>
+    <string name="must_info">※ 必填信息</string>
+    <string name="optional_info">※ 选填信息</string>
+    <string name="identity">身份信息</string>
+    <string name="emergency_people">紧急联系人</string>
+    <string name="other_info">其他信息</string>
+    <string name="undetermined">待定</string>
+    <string name="emergency">填写紧急联系人</string>
+    <string name="people_name">联系人姓名</string>
+    <string name="people_number">联系电话</string>
+    <string name="relation">和本人关系</string>
+    <string name="next">下一步</string>
+    <string name="card_name">持卡人姓名</string>
+    <string name="ID_number">身份证号</string>
+    <string name="choose_bank">选择银行</string>
+    <string name="bank_number">银行卡号</string>
+    <string name="bank_call">银行预留电话</string>
+    <string name="quick_payment">需要开通快捷支付</string>
+    <string name="agree">同意</string>
+    <string name="agree_info">《个人信用授权与征信协议》</string>
+    <string name="explain_one">1.绑定的银行卡须为储蓄卡，不支持信用卡；</string>
+    <string name="explain_two">2.此银行卡需开通快捷支付功能，否则无法绑定，开通方法请咨询发卡银行；</string>
+    <string name="explain_three">3.每人限定3次尝试，失败将被锁定，请填写正确的银行卡号，预留手机号以及验证码。</string>
+    <string name="explain_four">4.银行卡绑定后无法解除绑定。</string>
+    <string name="card_front">身份证正面扫描（未完成）</string>
+    <string name="card_behind">身份证后面扫描（未完成）</string>
+    <string name="face_recognition">人脸识别（未完成）</string>
+    <string name="people_info">个人信息</string>
+    <string name="occupation">当前职业</string>
+    <string name="education">教育程度</string>
+    <string name="marital">婚姻状态</string>
+
+
 
     <string name="rationale_ask_again">如果没有请求的权限，这个应用程序可能无法正常工作。打开应用程序设置界面修改应用程序权限。</string>
     <string name="title_settings_dialog">权限要求</string>

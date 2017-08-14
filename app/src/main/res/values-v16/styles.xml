@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="text_13_black_000000" parent="MatchHeight_44">
+        <item name="android:textSize">@dimen/text_13</item>
+        <item name="android:textColor">@color/black_000000</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+</resources>

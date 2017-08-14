@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchMatch.Vertical"
+    android:background="@color/white_ffffff">
+
+    <include layout="@layout/titlebar_white" />
+
+    <TextView
+        style="@style/text_12_gray_969696"
+        android:text="@string/must_info"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_25"
+        />
+
+    <LinearLayout
+        style="@style/MatchWrap.Vertical"
+        android:layout_marginLeft="@dimen/margin_25"
+        android:layout_marginRight="@dimen/margin_25"
+        >
+
+    <TextView
+        android:id="@+id/tv_identity"
+        style="@style/text_13_black_000000"
+        android:gravity="center_vertical"
+        android:drawableRight="@drawable/arrow"
+        android:text="@string/identity" />
+    <include layout="@layout/include_line" />
+    <TextView
+        android:id="@+id/tv_emergency"
+        style="@style/text_13_black_000000"
+        android:gravity="center_vertical"
+        android:drawableRight="@drawable/arrow"
+        android:text="@string/emergency_people" />
+
+        <include layout="@layout/include_line" />
+        <TextView
+            android:id="@+id/tv_otherinfo"
+            style="@style/text_13_black_000000"
+            android:gravity="center_vertical"
+            android:drawableRight="@drawable/arrow"
+            android:text="@string/other_info" />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/text_12_gray_969696"
+        android:text="@string/optional_info"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_25"
+        />
+
+    <LinearLayout
+        style="@style/MatchWrap.Vertical"
+        android:layout_marginLeft="@dimen/margin_25"
+        android:layout_marginRight="@dimen/margin_25" >
+        <TextView
+            android:id="@+id/tv_undetermined"
+            style="@style/text_13_black_000000"
+            android:gravity="center_vertical"
+            android:drawableRight="@drawable/arrow"
+            android:text="@string/undetermined" />
+
+        <include layout="@layout/include_line" />
+
+    </LinearLayout>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

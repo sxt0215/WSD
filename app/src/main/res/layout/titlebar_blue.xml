@@ -4,25 +4,18 @@
     android:layout_height="@dimen/title_height">
 
     <RelativeLayout
-        style="@style/MatchMatch.Vertical"
-        android:background="@drawable/btn_shade">
-
-        <!--一条灰色线-->
-        <!--<View-->
-            <!--android:id="@+id/cutline"-->
-            <!--style="@style/MatchOne"-->
-            <!--android:background="@color/gray_cccccc"-->
-            <!--android:layout_alignParentBottom="true" />-->
+        style="@style/MatchMatch"
+        android:background="@color/blue_436dc7">
 
         <ImageView
             android:id="@+id/right_img"
-            android:layout_width="@dimen/margin_60"
+            android:layout_width="@dimen/margin_44"
             android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
             android:clickable="true"
             android:visibility="gone"
             android:scaleType="centerInside"
-            android:src="@drawable/back_gray"
+            android:src="@drawable/back"
              />
 
         <TextView
@@ -50,7 +43,7 @@
 
         <ImageView
             android:id="@+id/left_img"
-            android:layout_width="@dimen/margin_60"
+            android:layout_width="@dimen/margin_40"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
             android:scaleType="centerInside"
@@ -59,7 +52,7 @@
 
         <TextView
             android:id="@+id/right_text"
-            android:layout_width="@dimen/margin_60"
+            android:layout_width="@dimen/margin_40"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
             android:clickable="true"

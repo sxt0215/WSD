@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchMatch"
+    android:background="@color/white_ffffff">
+
+    <include
+        android:id="@+id/in_title"
+        layout="@layout/titlebar_white" />
+
+    <LinearLayout
+        android:id="@+id/lin_step"
+        android:layout_below="@+id/in_title"
+        style="@style/MatchWrap.Horizontal"
+        android:layout_marginTop="@dimen/margin_20"
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/first_step"/>
+        <ImageView
+            android:layout_width="@dimen/margin_30"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dash_line_blue"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/second_step"/>
+        <ImageView
+            android:layout_width="@dimen/margin_30"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dash_line_gray"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/third_step"/>
+        <ImageView
+            android:layout_width="@dimen/margin_30"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dash_line_gray"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/four_step"/>
+        <ImageView
+            android:layout_width="@dimen/margin_30"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dash_line_gray"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/five_step"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/lin_step"
+        style="@style/MatchWrap.Vertical"
+        android:layout_marginLeft="@dimen/margin_25"
+        android:layout_marginRight="@dimen/margin_25"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_44"
+            android:layout_marginRight="@dimen/margin_5"
+            android:layout_marginTop="@dimen/margin_10"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/et_card_name"
+                style="@style/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/card_name"
+                />
+        </LinearLayout>
+        <include layout="@layout/include_line" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_44"
+            android:layout_marginRight="@dimen/margin_5"
+            android:layout_marginTop="@dimen/margin_10"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/et_id_number"
+                style="@style/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/ID_number"
+                />
+        </LinearLayout>
+        <include layout="@layout/include_line" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_44"
+            android:layout_marginRight="@dimen/margin_5"
+            android:layout_marginTop="@dimen/margin_10"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/et_choose_bank"
+                style="@style/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/choose_bank"
+                />
+        </LinearLayout>
+        <include layout="@layout/include_line" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_44"
+            android:layout_marginRight="@dimen/margin_5"
+            android:layout_marginTop="@dimen/margin_10"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/et_bank_number"
+                style="@style/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/bank_number"
+                />
+        </LinearLayout>
+        <include layout="@layout/include_line" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_44"
+            android:layout_marginRight="@dimen/margin_5"
+            android:layout_marginTop="@dimen/margin_10"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/et_bank_call"
+                style="@style/edit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:hint="@string/bank_call"
+                />
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/text_12_gray_bebebe"
+                android:text="@string/quick_payment" />
+        </LinearLayout>
+        <include layout="@layout/include_line" />
+        <LinearLayout
+            style="@style/WrapWrap.Horizontal"
+            android:layout_marginTop="@dimen/margin_12">
+            <TextView
+                style="@style/text_12_black_5a5a5a"
+                android:drawableLeft="@drawable/unselected"
+                android:gravity="center_vertical"
+                android:text="@string/agree"
+                />
+            <TextView
+                style="@style/text_12_blue_436dc7"
+                android:text="@string/agree_info"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/MatchWrap.Vertical"
+            android:layout_marginTop="@dimen/margin_15">
+            <TextView
+                style="@style/text_10_yellow_ffb319"
+                android:text="@string/explain_one"/>
+            <TextView
+                style="@style/text_10_yellow_ffb319"
+                android:text="@string/explain_two"/>
+            <TextView
+                style="@style/text_10_yellow_ffb319"
+                android:text="@string/explain_three"/>
+            <TextView
+                style="@style/text_10_yellow_ffb319"
+                android:text="@string/explain_four"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+    <Button
+        android:id="@+id/btn_next"
+        style="@style/text_16_white"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:layout_marginRight="@dimen/margin_25"
+        android:layout_marginLeft="@dimen/margin_25"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/btn_gray"
+        android:text="@string/next" />
+
+</RelativeLayout>

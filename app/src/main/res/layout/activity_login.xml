@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    style="@style/MatchMatch.Vertical"
+    android:background="@color/white_ffffff">
 
-    <include
-        layout="@layout/titlebar_white"
-         />
+    <include layout="@layout/titlebar_white" />
 
     <ImageView
         style="@style/WrapWrap"
@@ -16,100 +13,122 @@
 
     <LinearLayout
         style="@style/MatchWrap.Vertical"
-        android:layout_marginTop="@dimen/margin_60"
-        android:layout_marginLeft="@dimen/margin_30"
-        android:layout_marginRight="@dimen/margin_30"
-        >
+        android:layout_marginLeft="@dimen/margin_25"
+        android:layout_marginRight="@dimen/margin_25"
+        android:layout_marginTop="@dimen/margin_44">
 
-        <LinearLayout style="@style/MatchWrap.Horizontal"
-            android:layout_height="@dimen/margin_60"
-            >
-
-            <TextView
-                style="@style/text_22_black_333333"
-                android:layout_gravity="center_vertical"
-                android:text="@string/use_number" />
+        <LinearLayout
+            style="@style/MatchWrap.Horizontal"
+            android:layout_height="@dimen/margin_44"
+            android:layout_marginRight="@dimen/margin_8">
 
             <com.jyph.wsdapp.common.utils.view.ClearEditText
                 android:id="@+id/et_login_account"
                 style="@style/edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:digits="1234567890."
+                android:digits="1234567890"
+                android:hint="@string/use_number"
                 android:imeOptions="actionNext"
-                android:paddingLeft="@dimen/margin_10"
-                android:nextFocusForward="@+id/et_login_password" />
-
+                android:maxLength="11"
+                android:nextFocusForward="@+id/et_img_code" />
         </LinearLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_marginLeft="@dimen/margin_20"
-            android:layout_marginRight="@dimen/margin_20"
-            android:background="@color/gray_ededed"></View>
-
-
+        <include layout="@layout/include_line" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/margin_60"
+            android:layout_height="@dimen/margin_44"
+            android:layout_marginRight="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_10"
             android:orientation="horizontal">
-            <TextView
-                style="@style/text_22_black_333333"
-                android:layout_gravity="center_vertical"
-                android:text="@string/use_code" />
 
             <EditText
-                android:id="@+id/et_sms_code"
+                android:id="@+id/et_img_code"
+                style="@style/edit_text"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="5"
-                style="@style/edit_text"
+                android:hint="@string/img_code"
                 android:inputType="numberSigned"
-                android:maxLength="6"
-                />
-            <View
-                android:layout_width="1dp"
-                android:layout_height="@dimen/margin_30"
-                android:layout_gravity="center_vertical"
-                android:background="@color/gray_f2f2f2" />
-            <Button
-                android:id="@+id/btn_getcode"
-                style="@style/text_12_red_e74747"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:background="@null"
-                android:text="@string/get_code" />
+                android:maxLength="6" />
+
         </LinearLayout>
 
+        <include layout="@layout/include_line" />
 
-
-
-
-        <View
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_marginLeft="@dimen/margin_20"
-            android:layout_marginRight="@dimen/margin_20"
-            android:background="@color/gray_ededed"></View>
+            android:layout_height="@dimen/margin_44"
+            android:layout_marginRight="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_10"
+            android:orientation="horizontal">
 
-        <!--<Button-->
-            <!--android:id="@+id/btn_login"-->
-            <!--style="@style/button"-->
-            <!--android:layout_width="@dimen/margin_190"-->
-            <!--android:layout_height="@dimen/margin_40"-->
-            <!--android:background="@drawable/btn_red_ed7e84"-->
-            <!--android:layout_gravity="center_horizontal"-->
-            <!--android:text="@string/login"-->
-            <!--android:onClick="goLogin"-->
-            <!--android:textColor="@color/white"-->
-            <!--android:textSize="@dimen/text_15" />-->
+            <EditText
+                android:id="@+id/et_sms_code"
+                style="@style/edit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:hint="@string/sms_code"
+                android:inputType="numberSigned"
+                android:maxLength="6" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/margin_12"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/margin_4"
+                android:background="@color/gray_e3e3e3" />
+            
+            <TextView
+               style="@style/text_13_blue_436dc7"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/get_code"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/include_line" />
+
+        <LinearLayout
+            style="@style/WrapWrap.Horizontal"
+            android:layout_marginTop="@dimen/margin_12"
+            >
+            <TextView
+                style="@style/text_10_black_5a5a5a"
+                android:text="@string/call_explain"
+                />
+            <TextView
+                style="@style/text_10_blue_436dc7"
+                android:text="@string/call_pwd"
+                />
+        </LinearLayout>
+        <LinearLayout
+            style="@style/WrapWrap.Horizontal"
+            android:layout_marginTop="@dimen/margin_4"
+            >
+            <TextView
+                style="@style/text_10_black_5a5a5a"
+                android:text="@string/agreement_explain"
+                />
+            <TextView
+                style="@style/text_10_blue_436dc7"
+                android:text="@string/agreement"
+                />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            style="@style/text_16_white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_40"
+            android:layout_marginTop="@dimen/margin_40"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn_blue"
+            android:text="@string/login" />
 
     </LinearLayout>
-
-
 
 
 </LinearLayout>
