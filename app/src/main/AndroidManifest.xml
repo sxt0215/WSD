@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jyph.wsdapp" >
 
-
     <uses-permission android:name="android.permission.READ_LOGS" />
     <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -40,6 +39,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
+
     <application
         android:name="com.jyph.wsdapp.common.application.MyApplication"
         android:allowBackup="true"
@@ -70,6 +70,7 @@
             android:name="com.jyph.wsdapp.mvp.guide.SplashActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
             android:theme="@style/AppWhiteTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -79,22 +80,26 @@
         <activity
             android:name="com.jyph.wsdapp.mvp.guide.GuideActivity"
             android:launchMode="singleTop"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
             android:screenOrientation="portrait"
             android:theme="@style/AppBlueTheme" />
         <activity
             android:name="com.jyph.wsdapp.mvp.view.activity.MainActivity"
             android:launchMode="singleTop"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             />
         <activity
             android:name="com.jyph.wsdapp.mvp.view.activity.LoginActivity"
             android:launchMode="singleTop"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
             android:screenOrientation="portrait"
             android:theme="@style/AppWhiteTheme" />
         <activity
             android:name="com.jyph.wsdapp.mvp.view.activity.HomeActivity"
             android:launchMode="singleTop"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
             android:screenOrientation="portrait"
             android:theme="@style/AppBlueTheme" />
 
