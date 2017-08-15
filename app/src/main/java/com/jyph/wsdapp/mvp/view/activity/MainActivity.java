@@ -28,10 +28,11 @@ import android.widget.Toast;
 
 import com.jyph.wsdapp.R;
 import com.jyph.wsdapp.basemvp.view.base.BaseActivity;
+import com.jyph.wsdapp.common.application.MyApplication;
+import com.jyph.wsdapp.common.application.MyApplicationLike;
 import com.jyph.wsdapp.common.location.LocationUtils;
 import com.jyph.wsdapp.common.utils.LogMe;
 import com.jyph.wsdapp.common.utils.phoneinfo.ContactInfo;
-import com.jyph.wsdapp.mvp.Presenter.AddressPresenter;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -45,7 +46,7 @@ import pub.devrel.easypermissions.AppSettingsDialog;
 import pub.devrel.easypermissions.EasyPermissions;
 
 
-public class MainActivity extends BaseActivity<AddressPresenter> implements View.OnClickListener,EasyPermissions.PermissionCallbacks {
+public class MainActivity extends BaseActivity implements View.OnClickListener,EasyPermissions.PermissionCallbacks {
 
     private TextView tv_location,tv_phonebook,ed_phonebook,tv_yasuo,tv_yuantu,tv_address,
             tv_phonebook_all,ed_phonebook_all,
@@ -68,9 +69,9 @@ public class MainActivity extends BaseActivity<AddressPresenter> implements View
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        context = getApplicationContext();
+        context = MyApplicationLike.getInstance().getApplication();
 
-        LogMe.d("RegistrationID ==》",JPushInterface.getRegistrationID(getApplicationContext()));
+        LogMe.d("RegistrationID ==》",JPushInterface.getRegistrationID(context));
         initView();
         requestPermissions(); // 位置 相机 通讯录
 
@@ -79,10 +80,6 @@ public class MainActivity extends BaseActivity<AddressPresenter> implements View
             StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
             StrictMode.setVmPolicy(builder.build());
         }
-    }
-
-    public AddressPresenter bindPresenter() {
-        return new AddressPresenter(this);
     }
 
     private void initView() {
@@ -138,20 +135,20 @@ public class MainActivity extends BaseActivity<AddressPresenter> implements View
                 getCamera();
                 break;
             case R.id.tv_phonebook_all:
-                ed_phonebook_all.setText(ContactInfo.getContact(getApplication()));
+                ed_phonebook_all.setText(ContactInfo.getContact(context));
                 break;
             case R.id.tv_phonebook_call:
-                ed_phonebook_call.setText(ContactInfo.getCallInPhone(getApplication()));
+                ed_phonebook_call.setText(ContactInfo.getCallInPhone(context));
                 break;
             case R.id.tv_phonebook_sms:
-                ed_phonebook_sms.setText(ContactInfo.getSmsInPhone(getApplication()));
+                ed_phonebook_sms.setText(ContactInfo.getSmsInPhone(context));
                 LogMe.d("短信内容",ContactInfo.getSmsInPhone(getApplication()));
                 break;
             case R.id.left_img:
                 startActivity(new Intent(this,HomeActivity.class));
                 break;
             case R.id.btn_tiao:
-                startActivity(new Intent(this,HomeActivity.class));
+                startActivity(new Intent(this,LoginActivity.class));
                 break;
         }
     }

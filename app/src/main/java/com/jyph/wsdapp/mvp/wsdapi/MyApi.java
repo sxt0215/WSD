@@ -1,6 +1,6 @@
 package com.jyph.wsdapp.mvp.wsdapi;
 
-import com.jyph.wsdapp.common.bean.JsonRootBean;
+import com.jyph.wsdapp.common.bean.BaseInfo;
 
 import io.reactivex.Observable;
 import retrofit2.http.GET;
@@ -11,16 +11,22 @@ import retrofit2.http.Query;
  */
 public interface MyApi {
 
+
     /**
-     * 谷歌地址
-     * */
-    interface GetGugeAddress{
-        @GET(MyApiConstants.API_GUGE)
-        Observable<JsonRootBean> getAddreaa(
-                @Query("latlng") String latitude
-//                @Path("longitude") Double longitude
-        );
+     * 登录短信验证码获取
+     */
+    interface LoginSmsCode {
+        @GET(MyApiConstants.API_LOGIN_SMS_CODE)
+        Observable<BaseInfo> getSmsCode(
+                @Query("mobile") String mobile);
     }
+
+
+
+
+
+
+
 
     /**
      * 首页CMS 最新公告  信息   PUBLICATION

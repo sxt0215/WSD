@@ -9,13 +9,13 @@
         style="@style/WrapWrap"
         android:src="@drawable/logo"
         android:layout_gravity="center"
-        android:layout_marginTop="@dimen/margin_40"/>
+        android:layout_marginTop="@dimen/margin_55"/>
 
     <LinearLayout
         style="@style/MatchWrap.Vertical"
-        android:layout_marginLeft="@dimen/margin_25"
-        android:layout_marginRight="@dimen/margin_25"
-        android:layout_marginTop="@dimen/margin_44">
+        android:layout_marginLeft="@dimen/distance_30"
+        android:layout_marginRight="@dimen/distance_30"
+        android:layout_marginTop="@dimen/margin_55">
 
         <LinearLayout
             style="@style/MatchWrap.Horizontal"
@@ -51,7 +51,12 @@
                 android:layout_weight="5"
                 android:hint="@string/img_code"
                 android:inputType="numberSigned"
+                android:imeOptions="actionNext"
+                android:nextFocusForward="@+id/et_sms_code"
                 android:maxLength="6" />
+
+
+
 
         </LinearLayout>
 
@@ -76,13 +81,14 @@
 
             <View
                 android:layout_width="1dp"
-                android:layout_height="@dimen/margin_12"
+                android:layout_height="@dimen/margin_25"
                 android:layout_gravity="center_vertical"
-                android:layout_marginRight="@dimen/margin_4"
-                android:background="@color/gray_e3e3e3" />
+                android:layout_marginRight="@dimen/margin_5"
+                android:background="@color/gray_969696" />
             
             <TextView
-               style="@style/text_13_blue_436dc7"
+                android:id="@+id/btn_get_code"
+               style="@style/text_16_blue_436dc7"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
                 android:text="@string/get_code"/>
@@ -93,14 +99,15 @@
 
         <LinearLayout
             style="@style/WrapWrap.Horizontal"
-            android:layout_marginTop="@dimen/margin_12"
+            android:layout_marginTop="@dimen/margin_14"
             >
             <TextView
-                style="@style/text_10_black_5a5a5a"
+                style="@style/text_12_black_5a5a5a"
                 android:text="@string/call_explain"
                 />
             <TextView
-                style="@style/text_10_blue_436dc7"
+                android:id="@+id/tv_phone"
+                style="@style/text_12_blue_436dc7"
                 android:text="@string/call_pwd"
                 />
         </LinearLayout>
@@ -109,26 +116,25 @@
             android:layout_marginTop="@dimen/margin_4"
             >
             <TextView
-                style="@style/text_10_black_5a5a5a"
+                style="@style/text_12_black_5a5a5a"
                 android:text="@string/agreement_explain"
                 />
             <TextView
-                style="@style/text_10_blue_436dc7"
+                android:id="@+id/tv_use_agree"
+                style="@style/text_12_blue_436dc7"
                 android:text="@string/agreement"
                 />
         </LinearLayout>
 
         <Button
             android:id="@+id/btn_login"
-            style="@style/text_16_white"
+            style="@style/text_18_white"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/margin_40"
+            android:layout_height="@dimen/btn_height_45"
             android:layout_marginTop="@dimen/margin_40"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/btn_blue"
             android:text="@string/login" />
-
     </LinearLayout>
-
 
 </LinearLayout>

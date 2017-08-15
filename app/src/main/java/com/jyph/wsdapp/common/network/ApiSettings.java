@@ -7,7 +7,6 @@ import com.jyph.wsdapp.mvp.wsdapi.MyApiConstants;
  * Created by sxt on 16/8/4.
  */
 public class ApiSettings {
-    public static String GUGEURL = MyApiConstants.IP_GUGE;
     public static String BASEURL = MyApiConstants.IP_UAT;
     public static String URL_BASE = MyApiConstants.IP_UAT_V2;
     public static String CLIENT_ID = MyApiConstants.CLIENT_ID_UAT;

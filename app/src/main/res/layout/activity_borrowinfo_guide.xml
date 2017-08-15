@@ -1,61 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/MatchMatch.Vertical"
     android:background="@color/white_ffffff">
 
-    <include layout="@layout/titlebar_white" />
+    <include
+        android:id="@+id/in_title"
+        layout="@layout/titlebar_white" />
 
     <TextView
-        style="@style/text_12_gray_969696"
+        android:id="@+id/tv_must_info"
+        android:layout_below="@+id/in_title"
+        style="@style/text_13_gray_969696_h34"
         android:text="@string/must_info"
         android:gravity="center_vertical"
-        android:paddingLeft="@dimen/margin_25"
+        android:paddingLeft="@dimen/distance_30"
         />
 
     <LinearLayout
+        android:id="@+id/lin_info"
+        android:layout_below="@+id/tv_must_info"
         style="@style/MatchWrap.Vertical"
-        android:layout_marginLeft="@dimen/margin_25"
-        android:layout_marginRight="@dimen/margin_25"
+        android:layout_marginLeft="@dimen/distance_30"
+        android:layout_marginRight="@dimen/distance_30"
         >
 
-    <TextView
-        android:id="@+id/tv_identity"
-        style="@style/text_13_black_000000"
-        android:gravity="center_vertical"
-        android:drawableRight="@drawable/arrow"
-        android:text="@string/identity" />
-    <include layout="@layout/include_line" />
-    <TextView
-        android:id="@+id/tv_emergency"
-        style="@style/text_13_black_000000"
-        android:gravity="center_vertical"
-        android:drawableRight="@drawable/arrow"
-        android:text="@string/emergency_people" />
-
-        <include layout="@layout/include_line" />
         <TextView
-            android:id="@+id/tv_otherinfo"
-            style="@style/text_13_black_000000"
+            android:id="@+id/tv_identity"
+            style="@style/text_14_black_000000_55"
             android:gravity="center_vertical"
             android:drawableRight="@drawable/arrow"
-            android:text="@string/other_info" />
+            android:text="@string/identity" />
+        <include layout="@layout/include_line" />
+        <TextView
+            android:id="@+id/tv_emergency"
+            style="@style/text_14_black_000000_55"
+            android:gravity="center_vertical"
+            android:drawableRight="@drawable/arrow"
+            android:text="@string/emergency_people" />
+
+            <include layout="@layout/include_line" />
+            <TextView
+                android:id="@+id/tv_otherinfo"
+                style="@style/text_14_black_000000_55"
+                android:gravity="center_vertical"
+                android:drawableRight="@drawable/arrow"
+                android:text="@string/other_info" />
 
     </LinearLayout>
 
     <TextView
-        style="@style/text_12_gray_969696"
+        android:id="@+id/tv_choose"
+        android:layout_below="@+id/lin_info"
+        style="@style/text_13_gray_969696_h34"
         android:text="@string/optional_info"
         android:gravity="center_vertical"
-        android:paddingLeft="@dimen/margin_25"
+        android:paddingLeft="@dimen/distance_30"
         />
 
     <LinearLayout
+        android:id="@+id/lin_choose"
+        android:layout_below="@+id/tv_choose"
         style="@style/MatchWrap.Vertical"
-        android:layout_marginLeft="@dimen/margin_25"
-        android:layout_marginRight="@dimen/margin_25" >
+        android:layout_marginLeft="@dimen/distance_30"
+        android:layout_marginRight="@dimen/distance_30" >
         <TextView
             android:id="@+id/tv_undetermined"
-            style="@style/text_13_black_000000"
+            style="@style/text_14_black_000000_55"
             android:gravity="center_vertical"
             android:drawableRight="@drawable/arrow"
             android:text="@string/undetermined" />
@@ -65,20 +75,13 @@
     </LinearLayout>
 
 
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-</LinearLayout>
+    <Button
+        android:id="@+id/btn_bind_card"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height_49"
+        android:layout_alignParentBottom="true"
+        android:background="@color/blue_386ee3"
+        style="@style/text_18_white"
+        android:text="@string/bind_card_borrow"
+        />
+</RelativeLayout>

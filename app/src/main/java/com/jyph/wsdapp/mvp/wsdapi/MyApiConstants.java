@@ -5,8 +5,6 @@ package com.jyph.wsdapp.mvp.wsdapi;
  * Created by sxt on 16/12/19.
  */
 public class MyApiConstants {
-    //谷歌API根据经纬度获取 地址信息  http://maps.googleapis.com/maps/api
-    public final static String IP_GUGE = "https://maps.googleapis.com/maps/api/";
     //测试环境  https://lmjf.uats.cc/
     public final static String IP_UAT = "https://lmjf.uats.cc/";
     public final static String IP_UAT_V2 = "https://lmjf.uats.cc/api/v2/";
@@ -22,9 +20,16 @@ public class MyApiConstants {
 
 
     /**
-     * 谷歌  http://maps.google.cn/maps/api/geocode/json?language=zh-CN&sensor=true&latlng=13.0,33.0    &latlng={latitude}
+     * 登录短信验证码获取
      * */
-    public final static String API_GUGE = "geocode/json?language=zh-CN&sensor=true";
+    public final static String API_LOGIN_SMS_CODE="register/smsCaptcha";
+
+
+
+
+
+
+
 
     /**
      * 首页轮播图

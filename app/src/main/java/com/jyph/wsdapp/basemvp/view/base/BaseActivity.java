@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.jyph.wsdapp.basemvp.presenter.MvpPresenter;
 import com.jyph.wsdapp.basemvp.view.impl.MvpBaseActivity;
 import com.jyph.wsdapp.common.application.MyApplication;
+import com.jyph.wsdapp.common.application.MyApplicationLike;
 import com.jyph.wsdapp.common.sharepreference.MySharePreference;
 import com.jyph.wsdapp.common.utils.LogMe;
 
@@ -134,7 +135,7 @@ public class BaseActivity<P extends MvpPresenter> extends MvpBaseActivity<P> {
     }
 
     public MySharePreference getSharedPref() {
-        return MyApplication.getInstance().getSharePreference();
+        return MyApplicationLike.getInstance().getSharePreference();
     }
 
     public void showSystemShortToast(String msg) {

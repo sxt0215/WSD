@@ -16,16 +16,6 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
-    <style name="MatchHeight_30">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/margin_30</item>
-    </style>
-    <style name="MatchHeight_44">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/margin_44</item>
-    </style>
-
-
     <style name="WrapMatch.Horizontal">
         <item name="android:orientation">horizontal</item>
     </style>
@@ -55,12 +45,46 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1px</item>
     </style>
+    <style name="MatchHeight_34">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/margin_34</item>
+    </style>
+    <style name="MatchHeight_55">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/margin_55</item>
+    </style>
+
+
+
+
+    <style name="MatchHeight_30">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/margin_30</item>
+    </style>
+    <style name="MatchHeight_33">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/margin_33</item>
+    </style>
+    <style name="MatchHeight_44">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/margin_44</item>
+    </style>
+
+
+
+
+
 
     <!-- line-->
     <style name="line">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1px</item>
         <item name="android:background">@color/line_e3e3e3</item>
+    </style>
+    <style name="line_white">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2px</item>
+        <item name="android:background">@color/white_ffffff</item>
     </style>
 
 </resources>

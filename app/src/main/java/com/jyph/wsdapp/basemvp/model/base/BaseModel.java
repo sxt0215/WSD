@@ -6,6 +6,7 @@ import android.util.Log;
 
 import com.jyph.wsdapp.basemvp.model.impl.MvpBaseModel;
 import com.jyph.wsdapp.common.application.MyApplication;
+import com.jyph.wsdapp.common.application.MyApplicationLike;
 
 import java.net.Inet6Address;
 import java.net.InetAddress;
@@ -41,10 +42,10 @@ public abstract class BaseModel extends MvpBaseModel {
     }
 
     public String getToken(){
-        return "Bearer "+ MyApplication.getInstance().getSharePreference().getToken();
+        return "Bearer "+ MyApplicationLike.getInstance().getSharePreference().getToken();
     }
     public String getUserId(){
-        return MyApplication.getInstance().getSharePreference().getUserId();
+        return MyApplicationLike.getInstance().getSharePreference().getUserId();
     }
 
     /**

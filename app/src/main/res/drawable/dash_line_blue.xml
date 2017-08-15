@@ -6,7 +6,7 @@
     <stroke
         android:dashGap="3dp"
         android:dashWidth="3dp"
-        android:color="@color/blue_4075e8"/>
+        android:color="@color/blue_5282ee"/>
     <!-- 虚线的高度 -->
     <size android:height="2dp" />
 </shape>

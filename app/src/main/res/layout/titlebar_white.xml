@@ -4,7 +4,6 @@
     android:layout_height="@dimen/title_height"
     android:background="@color/white_ffffff">
 
-
         <!--一条灰色线-->
         <View
             android:id="@+id/cutline"
@@ -16,6 +15,7 @@
         <ImageView
             android:id="@+id/img_left"
             android:layout_width="@dimen/margin_44"
+            android:layout_marginLeft="@dimen/margin_10"
             android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
             android:clickable="true"
@@ -32,7 +32,7 @@
             android:gravity="center_vertical"
             android:maxEms="10"
             android:singleLine="true"
-            style="@style/text_17_black_000000"
+            style="@style/text_18_black_000000"
             />
         <!--<TextView-->
             <!--android:layout_width="wrap_content"-->

@@ -8,21 +8,29 @@
 
     <!--距离-->
     <dimen name="title_height">44dp</dimen>
-    <dimen name="margin_4">4dp</dimen>
+    <dimen name="distance_30">30dp</dimen>
+    <dimen name="btn_height_45">45dp</dimen>
+    <dimen name="btn_height_49">49dp</dimen>
+    <dimen name="margin_15">15dp</dimen>
     <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_25">25dp</dimen>
+    <dimen name="margin_14">14dp</dimen>
+    <dimen name="margin_34">34dp</dimen>
+    <dimen name="margin_55">55dp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="margin_50">50dp</dimen>
+
+
+
+    <dimen name="margin_4">4dp</dimen>
     <dimen name="margin_8">8dp</dimen>
     <dimen name="margin_12">12dp</dimen>
-    <dimen name="margin_15">15dp</dimen>
     <dimen name="margin_17">17dp</dimen>
     <dimen name="margin_20">20dp</dimen>
-    <dimen name="margin_25">25dp</dimen>
-    <dimen name="margin_30">30dp</dimen>
+    <dimen name="margin_33">33dp</dimen>
     <dimen name="margin_40">40dp</dimen>
     <dimen name="margin_44">44dp</dimen>
     <dimen name="margin_273">273dp</dimen>
-
-
-
     <dimen name="margin_10">10dp</dimen>
 
 
@@ -30,14 +38,19 @@
 
 
     <!--text-->
-    <dimen name="text_10">10sp</dimen>
-    <dimen name="text_12">12sp</dimen>
+    <dimen name="text_18">18sp</dimen>
+    <dimen name="text_16">16sp</dimen>
     <dimen name="text_13">13sp</dimen>
     <dimen name="text_14">14sp</dimen>
-    <dimen name="text_16">16sp</dimen>
+    <dimen name="text_15">15sp</dimen>
+
+
+
+
+
+    <dimen name="text_10">10sp</dimen>
+    <dimen name="text_12">12sp</dimen>
     <dimen name="text_17">17sp</dimen>
-
-
     <dimen name="text_22">22sp</dimen>
 
 </resources>

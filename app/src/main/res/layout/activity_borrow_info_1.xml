@@ -6,169 +6,182 @@
         style="@style/MatchMatch"
         android:background="@color/white_ffffff">
 
-    <include
-        android:id="@+id/in_title"
-        layout="@layout/titlebar_white" />
+        <include
+            android:id="@+id/in_title"
+            layout="@layout/titlebar_white" />
 
-    <LinearLayout
-        android:id="@+id/lin_step"
-        android:layout_below="@+id/in_title"
-        style="@style/MatchWrap.Horizontal"
-        android:layout_marginTop="@dimen/margin_20"
-        android:gravity="center"
-        >
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/first_step"/>
-        <ImageView
-            android:layout_width="@dimen/margin_30"
-            android:layout_height="wrap_content"
-            android:src="@drawable/dash_line_blue"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/second_step"/>
-        <ImageView
-            android:layout_width="@dimen/margin_30"
-            android:layout_height="wrap_content"
-            android:src="@drawable/dash_line_gray"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/third_step"/>
-        <ImageView
-            android:layout_width="@dimen/margin_30"
-            android:layout_height="wrap_content"
-            android:src="@drawable/dash_line_gray"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/four_step"/>
-        <ImageView
-            android:layout_width="@dimen/margin_30"
-            android:layout_height="wrap_content"
-            android:src="@drawable/dash_line_gray"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/five_step"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/lin_card"
-        style="@style/MatchWrap.Vertical"
-        android:layout_below="@+id/lin_step"
-        android:gravity="center"
-        android:layout_marginTop="@dimen/margin_20">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/card_first"/>
-
-        <TextView
-            style="@style/text_13_black_000000"
-            android:text="@string/card_front"
+        <LinearLayout
+            android:id="@+id/lin_step"
+            android:layout_below="@+id/in_title"
+            style="@style/MatchWrap.Horizontal"
+            android:layout_marginTop="@dimen/margin_30"
             android:gravity="center"
-            />
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/first_step"/>
+            <ImageView
+                android:layout_width="@dimen/margin_34"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dash_line_blue"/>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/card_second"/>
-        <TextView
-            style="@style/text_13_black_000000"
-            android:text="@string/card_behind"
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/second_step"/>
+            <ImageView
+                android:layout_width="@dimen/margin_34"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dash_line_gray"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/third_step"/>
+            <ImageView
+                android:layout_width="@dimen/margin_34"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dash_line_gray"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/four_step"/>
+            <ImageView
+                android:layout_width="@dimen/margin_34"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dash_line_gray"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/five_step"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_card"
+            style="@style/MatchWrap.Vertical"
+            android:layout_below="@+id/lin_step"
             android:gravity="center"
-            />
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/card_third"/>
-        <TextView
-            style="@style/text_13_black_000000"
-            android:text="@string/face_recognition"
-            android:gravity="center"
-            />
-    </LinearLayout>
+            android:layout_marginTop="@dimen/margin_25">
+
+            <ImageView
+                android:id="@+id/img_card_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/card_first"/>
+
+            <TextView
+                android:id="@+id/tv_card_first"
+                style="@style/text_15_black_000000"
+                android:text="@string/card_front"
+                android:layout_marginTop="@dimen/margin_15"
+                android:gravity="center"
+                />
+
+            <ImageView
+                android:id="@+id/img_card_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_30"
+                android:src="@drawable/card_second"/>
+            <TextView
+                android:id="@+id/tv_card_second"
+                style="@style/text_15_black_000000"
+                android:layout_marginTop="@dimen/margin_15"
+                android:text="@string/card_behind"
+                android:gravity="center"
+                />
+            <ImageView
+                android:id="@+id/img_card_third"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_30"
+                android:src="@drawable/card_third"/>
+            <TextView
+                android:id="@+id/tv_card_third"
+                style="@style/text_15_black_000000"
+                android:text="@string/face_recognition"
+                android:layout_marginTop="@dimen/margin_15"
+                android:gravity="center"
+                />
+        </LinearLayout>
 
         <TextView
-            android:id="@+id/tv_info"
-            android:layout_below="@+id/lin_card"
-            style="@style/text_12_gray_969696"
-            android:text="@string/people_info"
-            android:drawableLeft="@drawable/people_info"
-            android:gravity="center_vertical"
-            android:paddingLeft="@dimen/margin_25"
-            />
-    <LinearLayout
-        android:id="@+id/lin_info"
-        android:layout_below="@+id/tv_info"
-        style="@style/MatchWrap.Vertical"
-        android:layout_marginRight="@dimen/margin_25"
-        android:layout_marginLeft="@dimen/margin_25">
-        <TextView
-            android:id="@+id/tv_occupation"
-            style="@style/text_13_black_000000"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/margin_44"
-            android:gravity="center_vertical"
-            android:hint="@string/occupation"
-            android:drawableRight="@drawable/arrow_domn"
-            android:paddingRight="@dimen/margin_5"
-            />
-        <include layout="@layout/include_line" />
-        <TextView
-            android:id="@+id/tv_education"
-            style="@style/text_13_black_000000"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/margin_44"
-            android:gravity="center_vertical"
-            android:hint="@string/education"
-            android:paddingRight="@dimen/margin_5"
-            android:drawableRight="@drawable/arrow_domn"
-            />
-        <include layout="@layout/include_line" />
-        <TextView
-            android:id="@+id/tv_marital"
-            style="@style/text_13_black_000000"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/margin_44"
-            android:gravity="center_vertical"
-            android:hint="@string/marital"
-            android:paddingRight="@dimen/margin_5"
-            android:drawableRight="@drawable/arrow_domn"
-            />
-        <include layout="@layout/include_line" />
-        <!--<TextView-->
-            <!--android:id="@+id/tv_marital"-->
-            <!--style="@style/text_13_black_000000"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="@dimen/margin_44"-->
-            <!--android:gravity="center_vertical"-->
-            <!--android:hint="@string/marital"-->
-            <!--android:drawableRight="@drawable/arrow_domn"-->
-            <!--/>-->
-        <!--<include layout="@layout/include_line" />-->
+                android:id="@+id/tv_info"
+                android:layout_below="@+id/lin_card"
+                style="@style/text_13_gray_969696_h34"
+                android:text="@string/people_info"
+                android:drawableLeft="@drawable/people_info"
+                android:layout_marginTop="@dimen/margin_30"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/distance_30"
+                />
+        <LinearLayout
+            android:id="@+id/lin_info"
+            android:layout_below="@+id/tv_info"
+            style="@style/MatchWrap.Vertical"
+            android:layout_marginRight="@dimen/distance_30"
+            android:layout_marginLeft="@dimen/distance_30">
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/tv_occupation"
+                style="@style/text_14_black_000000"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_50"
+                android:drawableRight="@drawable/arrow_down"
+                android:gravity="center_vertical"
+                android:hint="@string/occupation"
+                android:paddingRight="@dimen/margin_5" />
 
-    <Button
-        android:id="@+id/btn_next"
-        android:layout_below="@+id/lin_info"
-        style="@style/text_16_white"
-        android:layout_marginBottom="@dimen/margin_20"
-        android:layout_marginTop="@dimen/margin_40"
-        android:layout_marginRight="@dimen/margin_25"
-        android:layout_marginLeft="@dimen/margin_25"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/margin_40"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/btn_gray"
-        android:text="@string/next" />
+            <include layout="@layout/include_line" />
+            <TextView
+                android:id="@+id/tv_education"
+                style="@style/text_14_black_000000"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_50"
+                android:gravity="center_vertical"
+                android:hint="@string/education"
+                android:paddingRight="@dimen/margin_5"
+                android:drawableRight="@drawable/arrow_down"
+                />
+            <include layout="@layout/include_line" />
+            <TextView
+                android:id="@+id/tv_marital"
+                style="@style/text_14_black_000000"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_50"
+                android:gravity="center_vertical"
+                android:hint="@string/marital"
+                android:paddingRight="@dimen/margin_5"
+                android:drawableRight="@drawable/arrow_down"
+                />
+            <include layout="@layout/include_line" />
+            <TextView
+                android:id="@+id/tv_house_type"
+                style="@style/text_14_black_000000"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_50"
+                android:gravity="center_vertical"
+                android:hint="@string/house_type"
+                android:drawableRight="@drawable/arrow_down"
+                />
+            <include layout="@layout/include_line" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_below="@+id/lin_info"
+            style="@style/text_18_white"
+            android:layout_marginBottom="@dimen/margin_25"
+            android:layout_marginTop="@dimen/margin_34"
+            android:layout_marginRight="@dimen/distance_30"
+            android:layout_marginLeft="@dimen/distance_30"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height_45"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn_gray"
+            android:text="@string/next" />
 
     </RelativeLayout>
 

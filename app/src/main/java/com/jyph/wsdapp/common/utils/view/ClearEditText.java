@@ -53,7 +53,7 @@ public class ClearEditText extends EditText implements OnFocusChangeListener,
 
 	public ClearEditText(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
-//		init();
+		init();
 	}
 
 	private void init() {

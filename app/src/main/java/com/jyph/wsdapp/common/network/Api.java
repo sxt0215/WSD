@@ -4,6 +4,7 @@ import android.text.TextUtils;
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import com.jyph.wsdapp.common.application.MyApplication;
+import com.jyph.wsdapp.common.application.MyApplicationLike;
 import com.jyph.wsdapp.common.utils.MyUtils;
 
 import io.reactivex.schedulers.Schedulers;
@@ -53,7 +54,7 @@ public class Api {
                     //这里添加请求头信息
 //                    Request build = builder1.addHeader("apikey", "3c00d3dcb492f7098699aae47b08c468").build();
 //                    Request build = builder1.addHeader("apikey", "ac7c302dc489a69082cbee6a89e3646c").build();
-                    builder1.addHeader("Req_devId", MyUtils.getUUid(MyApplication.getInstance()));
+                    builder1.addHeader("Req_devId", MyUtils.getUUid(MyApplicationLike.getInstance().getApplication()));
                     if(!TextUtils.isEmpty(MyUtils.getToken())){
                         builder1.addHeader("Req_devicetoken", MyUtils.getToken());
                     }
@@ -87,7 +88,7 @@ public class Api {
                     //这里添加请求头信息
 //                    Request build = builder1.addHeader("apikey", "3c00d3dcb492f7098699aae47b08c468").build();
 //                    Request build = builder1.addHeader("apikey", "ac7c302dc489a69082cbee6a89e3646c").build();
-                    builder1.addHeader("Req_devId", MyUtils.getUUid(MyApplication.getInstance()));
+                    builder1.addHeader("Req_devId", MyUtils.getUUid(MyApplicationLike.getInstance().getApplication()));
                     if(!TextUtils.isEmpty(MyUtils.getToken())){
                         builder1.addHeader("Req_devicetoken", MyUtils.getToken());
                     }

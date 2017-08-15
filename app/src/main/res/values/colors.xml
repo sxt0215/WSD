@@ -8,7 +8,8 @@
     <color name="transparent">#00000000</color>
     <color name="white_ffffff">#ffffff</color>
     <color name="blue_436dc7">#436dc7</color>
-    <color name="blue_4075e8">#4075e8</color>
+    <color name="blue_5282ee">#5282ee</color>
+    <color name="blue_386ee3">#386ee3</color>
     <color name="black_000000">#000000</color>
     <color name="gray_bebebe">#bebebe</color>
     <color name="gray_bababa">#bababa</color>
@@ -18,6 +19,8 @@
     <color name="gray_e3e3e3">#e3e3e3</color>
     <color name="line_e3e3e3">#e3e3e3</color>
     <color name="yellow_ffb319">#ffb319</color>
+    <color name="gray_f1f1f5">#f1f1f5</color>
+    <color name="gray_ececf6">#ececf6</color>
 
 
 

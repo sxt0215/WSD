@@ -7,6 +7,7 @@ import com.jyph.wsdapp.basemvp.model.MvpModel;
 import com.jyph.wsdapp.basemvp.presenter.impl.MvpBasePresenter;
 import com.jyph.wsdapp.basemvp.view.MvpView;
 import com.jyph.wsdapp.common.application.MyApplication;
+import com.jyph.wsdapp.common.application.MyApplicationLike;
 import com.jyph.wsdapp.common.rxjava.RxLifeManager;
 
 import io.reactivex.disposables.CompositeDisposable;
@@ -40,9 +41,9 @@ public abstract class BasePresenter<V extends MvpView,M extends MvpModel> extend
     }
 
     public boolean isLogin(){
-        return MyApplication.getInstance().getSharePreference().isLogin();
+        return MyApplicationLike.getInstance().getSharePreference().isLogin();
     }
     public boolean isKaiHu(){
-        return MyApplication.getInstance().getSharePreference().isKaiHu();
+        return MyApplicationLike.getInstance().getSharePreference().isKaiHu();
     }
 }

@@ -16,20 +16,8 @@ public class MyApplication extends TinkerApplication {
      * 参数3：loaderClassName Tinker的加载器，使用默认即可
      * 参数4：tinkerLoadVerifyFlag 加载dex或者lib是否验证md5，默认为false
      * */
-    protected  MyApplication(){
+    public   MyApplication(){
         super(ShareConstants.TINKER_ENABLE_ALL, "com.jyph.wsdapp.common.application.MyApplicationLike",
                 "com.tencent.tinker.loader.TinkerLoader", false);;
-    }
-
-    protected MyApplication(int tinkerFlags) {
-        super(tinkerFlags);
-    }
-
-    protected MyApplication(int tinkerFlags, String delegateClassName, String loaderClassName, boolean tinkerLoadVerifyFlag) {
-        super(tinkerFlags, delegateClassName, loaderClassName, tinkerLoadVerifyFlag);
-    }
-
-    protected MyApplication(int tinkerFlags, String delegateClassName) {
-        super(tinkerFlags, delegateClassName);
     }
 }

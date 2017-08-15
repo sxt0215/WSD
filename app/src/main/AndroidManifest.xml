@@ -102,6 +102,18 @@
             android:configChanges="keyboardHidden|orientation|screenSize|locale"
             android:screenOrientation="portrait"
             android:theme="@style/AppBlueTheme" />
+        <activity
+            android:name="com.jyph.wsdapp.mvp.view.activity.BorrowInfoGuideActivity"
+            android:launchMode="singleTop"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppWhiteTheme" />
+        <activity
+            android:name="com.jyph.wsdapp.mvp.view.activity.BorrowInfoCardActivity"
+            android:launchMode="singleTop"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppWhiteTheme" />
 
     </application>
 

@@ -4,6 +4,8 @@
     <string name="use_number">手机号</string>
     <string name="img_code">图形验证码</string>
     <string name="sms_code">验证码</string>
+    <string name="sms_code2">短信验证码</string>
+    <string name="resend">重新发送</string>
     <string name="call_explain">没有收到短信验证码？</string>
     <string name="call_pwd">点击使用电话播报密码</string>
     <string name="agreement_explain">登录则默认接受</string>
@@ -12,6 +14,7 @@
     <string name="must_info">※ 必填信息</string>
     <string name="optional_info">※ 选填信息</string>
     <string name="identity">身份信息</string>
+    <string name="bind_card_borrow">绑定银行卡并借款</string>
     <string name="emergency_people">紧急联系人</string>
     <string name="other_info">其他信息</string>
     <string name="undetermined">待定</string>
@@ -39,6 +42,20 @@
     <string name="occupation">当前职业</string>
     <string name="education">教育程度</string>
     <string name="marital">婚姻状态</string>
+    <string name="house_type">户口类型</string>
+    <string name="card_info">银行卡信息</string>
+    <string name="cardof_name">持卡人姓名:</string>
+    <string name="id_number">身份证号:</string>
+    <string name="borrow_info">借款信息</string>
+    <string name="borrow_money">借款金额</string>
+    <string name="borrow_time">借款期限</string>
+    <string name="account_money">账户管理费</string>
+    <string name="rate">利息</string>
+    <string name="pay_money">支付信审费</string>
+    <string name="amount">到账金额</string>
+    <string name="date_repayment">到期还款</string>
+    <string name="repayment_date">还款日期</string>
+    <string name="sure_borrow">确认借款</string>
 
 
 

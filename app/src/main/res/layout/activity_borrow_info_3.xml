@@ -144,9 +144,17 @@
         <LinearLayout
             style="@style/WrapWrap.Horizontal"
             android:layout_marginTop="@dimen/margin_12">
+            <CheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="@dimen/margin_4"
+                android:background="@drawable/checkbox_protocol_selector"
+                android:layout_centerVertical="true"
+                android:button="@null"
+                android:checked="true" />
             <TextView
                 style="@style/text_12_black_5a5a5a"
-                android:drawableLeft="@drawable/unselected"
                 android:gravity="center_vertical"
                 android:text="@string/agree"
                 />
