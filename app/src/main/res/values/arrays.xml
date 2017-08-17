@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="job_name">
+        <item>上班族</item>
+        <item>企业主</item>
+        <item>自由职业</item>
+        <item>空乘</item>
+        <item>金融</item>
+        <item>律师</item>
+        <item>媒体</item>
+        <item>军人</item>
+        <item>警察</item>
+        <item>航海</item>
+        <item>无业or待业</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="ed_level">
+        <item>硕士及以上</item>
+        <item>本科</item>
+        <item>大专</item>
+        <item>中专/高中及以下</item>
+    </string-array>
+    <string-array name="marriage">
+        <item>未婚</item>
+        <item>已婚</item>
+        <item>无子女</item>
+        <item>已婚</item>
+        <item>有子女</item>
+        <item>离异</item>
+        <item>丧偶</item>
+    </string-array>
+    <string-array name="hukou">
+        <item>本地城市户口</item>
+        <item>本地农村户口</item>
+        <item>外地城市户口</item>
+        <item>外地农村户口</item>
+    </string-array>
+    <string-array name="relation">
+        <item>父母</item>
+        <item>孩子</item>
+        <item>配偶</item>
+        <item>朋友</item>
+    </string-array>
+</resources>

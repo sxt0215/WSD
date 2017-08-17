@@ -6,69 +6,30 @@
     <include
         android:id="@+id/in_title"
         layout="@layout/titlebar_white" />
-
     <LinearLayout
         android:id="@+id/lin_step"
-        android:layout_below="@+id/in_title"
         style="@style/MatchWrap.Horizontal"
-        android:layout_marginTop="@dimen/margin_20"
-        android:gravity="center"
-        >
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/first_step"/>
-        <ImageView
-            android:layout_width="@dimen/margin_30"
-            android:layout_height="wrap_content"
-            android:src="@drawable/dash_line_blue"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/second_step"/>
-        <ImageView
-            android:layout_width="@dimen/margin_30"
-            android:layout_height="wrap_content"
-            android:src="@drawable/dash_line_gray"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/third_step"/>
-        <ImageView
-            android:layout_width="@dimen/margin_30"
-            android:layout_height="wrap_content"
-            android:src="@drawable/dash_line_gray"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/four_step"/>
-        <ImageView
-            android:layout_width="@dimen/margin_30"
-            android:layout_height="wrap_content"
-            android:src="@drawable/dash_line_gray"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/five_step"/>
-
+        android:layout_below="@+id/in_title">
+        <include
+            layout="@layout/include_step"
+            />
     </LinearLayout>
 
     <TextView
         android:id="@+id/tv_info"
         android:layout_below="@+id/lin_step"
-        style="@style/text_14_black_000000"
+        style="@style/text_15_black_000000"
         android:drawableLeft="@drawable/blue"
-        android:layout_marginLeft="@dimen/margin_17"
-        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginLeft="@dimen/margin_22"
+        android:layout_marginTop="@dimen/margin_25"
         android:text="@string/emergency"
         />
 
     <LinearLayout
         android:layout_below="@+id/tv_info"
         style="@style/MatchWrap.Vertical"
-        android:layout_marginLeft="@dimen/margin_25"
-        android:layout_marginRight="@dimen/margin_25"
+        android:layout_marginLeft="@dimen/distance_30"
+        android:layout_marginRight="@dimen/distance_30"
         >
         <LinearLayout
             android:layout_width="match_parent"
@@ -78,7 +39,7 @@
             android:orientation="horizontal">
             <EditText
                 android:id="@+id/et_people_name"
-                style="@style/edit_text"
+                style="@style/edit_text_14"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="@string/people_name"
@@ -93,13 +54,13 @@
             android:orientation="horizontal">
             <EditText
                 android:id="@+id/et_people_number"
-                style="@style/edit_text"
+                style="@style/edit_text_14"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:paddingRight="@dimen/margin_5"
                 android:hint="@string/people_number"
                 android:drawableRight="@drawable/arrow"
                 />
-
         </LinearLayout>
         <include layout="@layout/include_line" />
         <LinearLayout
@@ -110,13 +71,13 @@
             android:orientation="horizontal">
             <EditText
                 android:id="@+id/et_relation"
-                style="@style/edit_text"
+                style="@style/edit_text_14"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:paddingRight="@dimen/margin_5"
                 android:hint="@string/relation"
                 android:drawableRight="@drawable/relation"
                 />
-
         </LinearLayout>
         <include layout="@layout/include_line" />
 
@@ -124,13 +85,13 @@
 
     <Button
         android:id="@+id/btn_next"
-        style="@style/text_16_white"
+        style="@style/text_18_white"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/margin_20"
-        android:layout_marginRight="@dimen/margin_25"
-        android:layout_marginLeft="@dimen/margin_25"
+        android:layout_marginBottom="@dimen/margin_25"
+        android:layout_marginRight="@dimen/distance_30"
+        android:layout_marginLeft="@dimen/distance_30"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/margin_40"
+        android:layout_height="@dimen/btn_height_45"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/btn_gray"
         android:text="@string/next" />

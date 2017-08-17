@@ -2,9 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/MatchMatch.Vertical"
     android:background="@color/white_ffffff">
-
     <include layout="@layout/titlebar_white" />
-
     <ImageView
         style="@style/WrapWrap"
         android:src="@drawable/logo"
@@ -28,6 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:digits="1234567890"
+                android:inputType="number"
                 android:hint="@string/use_number"
                 android:imeOptions="actionNext"
                 android:maxLength="11"
@@ -55,9 +54,6 @@
                 android:nextFocusForward="@+id/et_sms_code"
                 android:maxLength="6" />
 
-
-
-
         </LinearLayout>
 
         <include layout="@layout/include_line" />
@@ -68,7 +64,6 @@
             android:layout_marginRight="@dimen/margin_8"
             android:layout_marginTop="@dimen/margin_10"
             android:orientation="horizontal">
-
             <EditText
                 android:id="@+id/et_sms_code"
                 style="@style/edit_text"
@@ -78,21 +73,19 @@
                 android:hint="@string/sms_code"
                 android:inputType="numberSigned"
                 android:maxLength="6" />
-
             <View
                 android:layout_width="1dp"
                 android:layout_height="@dimen/margin_25"
                 android:layout_gravity="center_vertical"
                 android:layout_marginRight="@dimen/margin_5"
                 android:background="@color/gray_969696" />
-            
             <TextView
                 android:id="@+id/btn_get_code"
                style="@style/text_16_blue_436dc7"
+                android:layout_width="@dimen/margin_90"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
                 android:text="@string/get_code"/>
-
         </LinearLayout>
 
         <include layout="@layout/include_line" />

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_dialog"
+    style="@style/MatchMatch.Vertical"
+    android:background="@color/white_ffffff">
+    <LinearLayout
+        android:id="@+id/lin_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_51"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="取消"
+            style="@style/text_16_black_000000" />
+        <TextView
+            android:id="@+id/tv_chose_title"
+            style="@style/text_18_gray_969696"
+            android:layout_width="wrap_content"
+            android:layout_weight="4"
+            android:layout_height="@dimen/margin_51"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="当前职位"
+             />
+        <TextView
+            android:id="@+id/tv_sure"
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="确定"
+            style="@style/text_16_black_000000" />
+    </LinearLayout>
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/lin_top"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_eeeeee"></View>
+    <LinearLayout
+        android:layout_below="@+id/view"
+        android:id="@+id/dialog_picker_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+</RelativeLayout>

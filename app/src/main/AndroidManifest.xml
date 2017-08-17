@@ -114,7 +114,30 @@
             android:configChanges="keyboardHidden|orientation|screenSize|locale"
             android:screenOrientation="portrait"
             android:theme="@style/AppWhiteTheme" />
-
+        <activity
+            android:name="com.jyph.wsdapp.mvp.view.activity.BorrowInfoEmergencyActivity"
+            android:launchMode="singleTop"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppWhiteTheme" />
+        <activity
+            android:name="com.jyph.wsdapp.mvp.view.activity.BorrowInfoBindCardActivity"
+            android:launchMode="singleTop"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppWhiteTheme" />
+        <activity
+            android:name="com.jyph.wsdapp.mvp.view.activity.BorrowMoneyActivity"
+            android:launchMode="singleTop"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppWhiteTheme" />
+        <activity
+            android:name="com.jyph.wsdapp.mvp.view.activity.WebViewActivity"
+            android:launchMode="singleTop"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppWhiteTheme" />
     </application>
 
 </manifest>

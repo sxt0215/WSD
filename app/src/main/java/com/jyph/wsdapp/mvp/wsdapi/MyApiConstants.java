@@ -5,8 +5,8 @@ package com.jyph.wsdapp.mvp.wsdapi;
  * Created by sxt on 16/12/19.
  */
 public class MyApiConstants {
-    //测试环境  https://lmjf.uats.cc/
-    public final static String IP_UAT = "https://lmjf.uats.cc/";
+    //测试环境  https://lmjf.uats.cc/   rapapi.org/mockjs/23852
+    public final static String IP_UAT = "http://rapapi.org/mockjs/";
     public final static String IP_UAT_V2 = "https://lmjf.uats.cc/api/v2/";
     public final static String CLIENT_ID_UAT = "client-id-for-mobile-dev";
     public final static String CLIENT_SECRET_UAT = "client-secret-for-mobile-dev";
@@ -23,6 +23,10 @@ public class MyApiConstants {
      * 登录短信验证码获取
      * */
     public final static String API_LOGIN_SMS_CODE="register/smsCaptcha";
+    /**
+     * 登录接口
+     * */
+    public final static String API_LOGIN = "23852/wsd/login";
 
 
 
@@ -58,8 +62,4 @@ public class MyApiConstants {
      * */
     public final static String API_CHECKPHONE = "users/check/mobile";
 
-    /**
-     * 登录
-     * */
-    public final static String API_LOGIN = "token";
 }

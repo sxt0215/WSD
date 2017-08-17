@@ -1,6 +1,7 @@
 package com.jyph.wsdapp.mvp.wsdapi;
 
 import com.jyph.wsdapp.common.bean.BaseInfo;
+import com.jyph.wsdapp.common.bean.LoginInfo;
 
 import io.reactivex.Observable;
 import retrofit2.http.GET;
@@ -11,15 +12,23 @@ import retrofit2.http.Query;
  */
 public interface MyApi {
 
-
     /**
      * 登录短信验证码获取
      */
-    interface LoginSmsCode {
-        @GET(MyApiConstants.API_LOGIN_SMS_CODE)
-        Observable<BaseInfo> getSmsCode(
-                @Query("mobile") String mobile);
-    }
+    @GET(MyApiConstants.API_LOGIN_SMS_CODE)
+    Observable<BaseInfo> getSmsCode(
+             @Query("mobile") String mobile);
+
+    /**
+     * 登录接口
+     * */
+    @GET(MyApiConstants.API_LOGIN)
+    Observable<LoginInfo> getLogin(
+            @Query("userMobile") String userMobile,
+            @Query("code") String code,
+            @Query("source") String source
+    );
+
 
 
 

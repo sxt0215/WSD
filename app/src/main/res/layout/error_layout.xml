@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/error_tv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_ffffff"
+    android:textColor="@color/black_000000"
+    android:paddingTop="@dimen/margin_20"
+    android:gravity="center_horizontal"
+    android:text="@string/net_error"
+    android:textSize="@dimen/text_13" />

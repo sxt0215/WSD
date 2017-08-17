@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
+import android.util.DisplayMetrics;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
@@ -16,6 +17,7 @@ import com.jyph.wsdapp.common.application.MyApplication;
 import com.jyph.wsdapp.common.application.MyApplicationLike;
 import com.jyph.wsdapp.common.sharepreference.MySharePreference;
 import com.jyph.wsdapp.common.utils.LogMe;
+import com.jyph.wsdapp.common.utils.OnClickUtil;
 
 import java.net.Inet4Address;
 import java.net.InetAddress;
@@ -139,9 +141,9 @@ public class BaseActivity<P extends MvpPresenter> extends MvpBaseActivity<P> {
     }
 
     public void showSystemShortToast(String msg) {
-//        if (!OnClickUtil.isFastDoubleClick(2000)) {
-//            Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
-//        }
+        if (!OnClickUtil.isFastDoubleClick(2000)) {
+            Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void showSystemToast(String msg) {
@@ -341,15 +343,13 @@ public class BaseActivity<P extends MvpPresenter> extends MvpBaseActivity<P> {
 //        }
 //    }
 //
-//    public final int getPhoneWidth(){
-//
-//        DisplayMetrics displaymetrics = new DisplayMetrics();
-//        getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
-//        int height = displaymetrics.heightPixels;
-//        int width = displaymetrics.widthPixels;
-//
-//        return width;
-//    }
+    public final int getPhoneWidth(){
+        DisplayMetrics displaymetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+        int height = displaymetrics.heightPixels;
+        int width = displaymetrics.widthPixels;
+        return width;
+    }
 //
 //    public UMShareListener umShareListener = new UMShareListener() {
 //        @Override

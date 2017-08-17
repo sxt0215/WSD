@@ -10,18 +10,7 @@ import java.lang.reflect.Type;
 import okhttp3.ResponseBody;
 import retrofit2.Converter;
 
-/**
- * ==========================================
- * <p>
- * 作    者 : ying
- * <p>
- * 创建时间 ： 2016/9/13.
- * <p>
- * 用   途 :
- * <p>
- * <p>
- * ==========================================
- */
+
 public class MyResponseBodyConverter<T> implements Converter<ResponseBody,T> {
     public static final int OK = 200;
     private static final String code = "code";

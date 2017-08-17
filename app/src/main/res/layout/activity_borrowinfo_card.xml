@@ -9,52 +9,13 @@
         <include
             android:id="@+id/in_title"
             layout="@layout/titlebar_white" />
-
         <LinearLayout
             android:id="@+id/lin_step"
-            android:layout_below="@+id/in_title"
             style="@style/MatchWrap.Horizontal"
-            android:layout_marginTop="@dimen/margin_30"
-            android:gravity="center"
-            >
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/first_step"/>
-            <ImageView
-                android:layout_width="@dimen/margin_34"
-                android:layout_height="wrap_content"
-                android:src="@drawable/dash_line_blue"/>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/second_step"/>
-            <ImageView
-                android:layout_width="@dimen/margin_34"
-                android:layout_height="wrap_content"
-                android:src="@drawable/dash_line_gray"/>
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/third_step"/>
-            <ImageView
-                android:layout_width="@dimen/margin_34"
-                android:layout_height="wrap_content"
-                android:src="@drawable/dash_line_gray"/>
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/four_step"/>
-            <ImageView
-                android:layout_width="@dimen/margin_34"
-                android:layout_height="wrap_content"
-                android:src="@drawable/dash_line_gray"/>
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/five_step"/>
-
+            android:layout_below="@+id/in_title">
+            <include
+                layout="@layout/include_step"
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -181,6 +142,7 @@
             android:layout_height="@dimen/btn_height_45"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/btn_gray"
+            android:enabled="false"
             android:text="@string/next" />
 
     </RelativeLayout>

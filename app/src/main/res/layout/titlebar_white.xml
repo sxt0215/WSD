@@ -29,7 +29,7 @@
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
             android:ellipsize="end"
-            android:gravity="center_vertical"
+            android:gravity="center"
             android:maxEms="10"
             android:singleLine="true"
             style="@style/text_18_black_000000"

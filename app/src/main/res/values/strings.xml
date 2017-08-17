@@ -1,4 +1,5 @@
 <resources>
+    <string name="net_error">网络连接错误</string>
     <string name="app_name">微闪贷</string>
     <string name="get_code">获取验证码</string>
     <string name="use_number">手机号</string>
@@ -21,8 +22,9 @@
     <string name="emergency">填写紧急联系人</string>
     <string name="people_name">联系人姓名</string>
     <string name="people_number">联系电话</string>
-    <string name="relation">和本人关系</string>
+    <string name="relation">和本人关系：</string>
     <string name="next">下一步</string>
+    <string name="bind_card">一键绑卡</string>
     <string name="card_name">持卡人姓名</string>
     <string name="ID_number">身份证号</string>
     <string name="choose_bank">选择银行</string>
@@ -56,6 +58,7 @@
     <string name="date_repayment">到期还款</string>
     <string name="repayment_date">还款日期</string>
     <string name="sure_borrow">确认借款</string>
+    <string name="fill_data">填写借款资料</string>
 
 
 

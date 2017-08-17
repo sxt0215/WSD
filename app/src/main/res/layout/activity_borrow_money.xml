@@ -12,58 +12,20 @@
 
         <LinearLayout
             android:id="@+id/lin_step"
-            android:layout_below="@+id/in_title"
             style="@style/MatchWrap.Horizontal"
-            android:layout_marginTop="@dimen/margin_20"
-            android:gravity="center"
-            >
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/first_step"/>
-            <ImageView
-                android:layout_width="@dimen/margin_30"
-                android:layout_height="wrap_content"
-                android:src="@drawable/dash_line_blue"/>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/second_step"/>
-            <ImageView
-                android:layout_width="@dimen/margin_30"
-                android:layout_height="wrap_content"
-                android:src="@drawable/dash_line_gray"/>
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/third_step"/>
-            <ImageView
-                android:layout_width="@dimen/margin_30"
-                android:layout_height="wrap_content"
-                android:src="@drawable/dash_line_gray"/>
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/four_step"/>
-            <ImageView
-                android:layout_width="@dimen/margin_30"
-                android:layout_height="wrap_content"
-                android:src="@drawable/dash_line_gray"/>
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/five_step"/>
-
+            android:layout_below="@+id/in_title">
+            <include
+                layout="@layout/include_step"
+                />
         </LinearLayout>
 
         <TextView
             android:id="@+id/tv_info"
             android:layout_below="@+id/lin_step"
-            style="@style/text_14_black_000000"
+            style="@style/text_15_black_000000"
             android:drawableLeft="@drawable/blue"
-            android:layout_marginLeft="@dimen/margin_17"
-            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginLeft="@dimen/margin_22"
+            android:layout_marginTop="@dimen/margin_25"
             android:text="@string/card_info"
             />
 
@@ -71,21 +33,21 @@
             android:id="@+id/lin_info"
             android:layout_below="@+id/tv_info"
             style="@style/MatchWrap.Vertical"
-            android:layout_marginLeft="@dimen/margin_25"
-            android:layout_marginRight="@dimen/margin_25"
+            android:layout_marginLeft="@dimen/distance_30"
+            android:layout_marginRight="@dimen/distance_30"
             >
             <LinearLayout
                 style="@style/MatchWrap.Horizontal"
-                android:layout_marginTop="@dimen/margin_15">
+                android:layout_marginTop="@dimen/margin_20">
                 <TextView
-                    style="@style/text_12_gray_969696"
+                    style="@style/text_13_gray_969696"
                     android:text="@string/cardof_name"
                     android:gravity="center_vertical"
                     android:layout_marginRight="@dimen/margin_10"
                     />
                 <TextView
                     android:id="@+id/tv_cardof_name"
-                    style="@style/text_12_black_000000"
+                    style="@style/text_13_black_000000"
                     android:gravity="center_vertical"
                     />
             </LinearLayout>
@@ -93,14 +55,14 @@
                 style="@style/MatchWrap.Horizontal"
                 android:layout_marginTop="@dimen/margin_15">
                 <TextView
-                    style="@style/text_12_gray_969696"
+                    style="@style/text_13_gray_969696"
                     android:text="@string/id_number"
                     android:gravity="center_vertical"
                     android:layout_marginRight="@dimen/margin_10"
                     />
                 <TextView
                     android:id="@+id/tv_id_number"
-                    style="@style/text_12_black_000000"
+                    style="@style/text_13_black_000000"
                     android:gravity="center_vertical"
                     />
             </LinearLayout>
@@ -109,13 +71,13 @@
                 android:layout_marginTop="@dimen/margin_5">
                 <TextView
                     android:id="@+id/tv_card_name"
-                    style="@style/text_12_gray_969696"
+                    style="@style/text_13_gray_969696"
                     android:text="xx银行"
                     android:layout_marginRight="@dimen/margin_10"
                     />
                 <EditText
                     android:id="@+id/ed_card_number"
-                    style="@style/text_12_black_000000"
+                    style="@style/text_13_black_000000"
                     android:hint="1111 1111 1111 1111"
                     />
                 <ImageView
@@ -127,13 +89,13 @@
             <LinearLayout
                 style="@style/MatchWrap.Horizontal">
                 <TextView
-                    style="@style/text_12_gray_969696"
+                    style="@style/text_13_gray_969696"
                     android:text="@string/bank_call"
                     android:layout_marginRight="@dimen/margin_10"
                     />
                 <EditText
                     android:id="@+id/ed_call_number"
-                    style="@style/text_12_black_000000"
+                    style="@style/text_13_black_000000"
                     android:hint="111 1111 1111"
                     />
                 <ImageView
@@ -145,19 +107,19 @@
             <LinearLayout
                 style="@style/MatchWrap.Horizontal">
                 <TextView
-                    style="@style/text_12_gray_969696"
+                    style="@style/text_13_gray_969696"
                     android:text="@string/sms_code2"
                     android:layout_marginRight="@dimen/margin_10"
                     />
                 <EditText
                     android:id="@+id/ed_sms_code"
-                    style="@style/text_12_black_000000"
+                    style="@style/text_13_black_000000"
                     android:layout_width="80dp"
                     />
                 <TextView
                     android:id="@+id/btn_get_code"
                     android:text="@string/resend"
-                    style="@style/text_12_blue_436dc7" />
+                    style="@style/text_13_blue_436dc7" />
             </LinearLayout>
         </LinearLayout>
 
@@ -166,165 +128,165 @@
             android:layout_below="@+id/lin_info"
             style="@style/text_14_black_000000"
             android:drawableLeft="@drawable/blue"
-            android:layout_marginLeft="@dimen/margin_17"
-            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginLeft="@dimen/margin_22"
+            android:layout_marginTop="@dimen/margin_25"
             android:text="@string/borrow_info"
             />
         <LinearLayout
             android:id="@+id/lin_borrow_info"
             android:layout_below="@+id/borrow_info"
             style="@style/MatchWrap.Vertical"
-            android:layout_marginTop="@dimen/margin_15"
-            android:layout_marginLeft="@dimen/margin_25"
-            android:layout_marginRight="@dimen/margin_25"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginLeft="@dimen/distance_30"
+            android:layout_marginRight="@dimen/distance_30"
             >
             <RelativeLayout
-                style="@style/MatchHeight_33"
+                style="@style/MatchHeight_34"
                 android:background="@color/gray_f1f1f5"
                 android:paddingLeft="@dimen/margin_15"
                 android:paddingRight="@dimen/margin_15"
                 android:gravity="center_vertical"
                 >
                 <TextView
-                    style="@style/text_12_gray_969696"
+                    style="@style/text_13_gray_969696"
                     android:layout_alignParentLeft="true"
                     android:text="@string/borrow_money"
                     />
                 <TextView
-                    style="@style/text_12_gray_969696"
+                    style="@style/text_13_gray_969696"
                     android:layout_alignParentRight="true"
                     android:text="@string/borrow_money"
                     />
             </RelativeLayout>
             <include layout="@layout/include_line_white" />
             <RelativeLayout
-                style="@style/MatchHeight_33"
+                style="@style/MatchHeight_34"
                 android:background="@color/gray_ececf6"
                 android:paddingLeft="@dimen/margin_15"
                 android:paddingRight="@dimen/margin_15"
                 android:gravity="center_vertical"
                 >
                 <TextView
-                    style="@style/text_12_gray_969696"
+                    style="@style/text_13_gray_969696"
                     android:layout_alignParentLeft="true"
                     android:text="@string/borrow_time"
                     />
                 <TextView
-                    style="@style/text_12_gray_969696"
+                    style="@style/text_13_gray_969696"
                     android:layout_alignParentRight="true"
                     android:text="@string/borrow_time"
                     />
             </RelativeLayout>
             <include layout="@layout/include_line_white" />
             <RelativeLayout
-                style="@style/MatchHeight_33"
+                style="@style/MatchHeight_34"
                 android:background="@color/gray_f1f1f5"
                 android:paddingLeft="@dimen/margin_15"
                 android:paddingRight="@dimen/margin_15"
                 android:gravity="center_vertical"
                 >
                 <TextView
-                    style="@style/text_12_gray_969696"
+                    style="@style/text_13_gray_969696"
                     android:layout_alignParentLeft="true"
                     android:text="@string/account_money"
                     />
                 <TextView
-                    style="@style/text_12_gray_969696"
+                    style="@style/text_13_gray_969696"
                     android:layout_alignParentRight="true"
                     android:text="@string/account_money"
                     />
             </RelativeLayout>
             <include layout="@layout/include_line_white" />
             <RelativeLayout
-                style="@style/MatchHeight_33"
+                style="@style/MatchHeight_34"
                 android:background="@color/gray_ececf6"
                 android:paddingLeft="@dimen/margin_15"
                 android:paddingRight="@dimen/margin_15"
                 android:gravity="center_vertical"
                 >
                 <TextView
-                    style="@style/text_12_gray_969696"
+                    style="@style/text_13_gray_969696"
                     android:layout_alignParentLeft="true"
                     android:text="@string/rate"
                     />
                 <TextView
-                    style="@style/text_12_gray_969696"
+                    style="@style/text_13_gray_969696"
                     android:layout_alignParentRight="true"
                     android:text="@string/rate"
                     />
             </RelativeLayout>
             <include layout="@layout/include_line_white" />
             <RelativeLayout
-                style="@style/MatchHeight_33"
+                style="@style/MatchHeight_34"
                 android:background="@color/gray_f1f1f5"
                 android:paddingLeft="@dimen/margin_15"
                 android:paddingRight="@dimen/margin_15"
                 android:gravity="center_vertical"
                 >
                 <TextView
-                    style="@style/text_12_gray_969696"
+                    style="@style/text_13_gray_969696"
                     android:layout_alignParentLeft="true"
                     android:text="@string/pay_money"
                     />
                 <TextView
-                    style="@style/text_12_gray_969696"
+                    style="@style/text_13_gray_969696"
                     android:layout_alignParentRight="true"
                     android:text="@string/pay_money"
                     />
             </RelativeLayout>
             <include layout="@layout/include_line_white" />
             <RelativeLayout
-                style="@style/MatchHeight_33"
+                style="@style/MatchHeight_34"
                 android:background="@color/gray_ececf6"
                 android:paddingLeft="@dimen/margin_15"
                 android:paddingRight="@dimen/margin_15"
                 android:gravity="center_vertical"
                 >
                 <TextView
-                    style="@style/text_12_gray_969696"
+                    style="@style/text_13_gray_969696"
                     android:layout_alignParentLeft="true"
                     android:text="@string/amount"
                     />
                 <TextView
-                    style="@style/text_12_gray_969696"
+                    style="@style/text_13_gray_969696"
                     android:layout_alignParentRight="true"
                     android:text="@string/amount"
                     />
             </RelativeLayout>
             <include layout="@layout/include_line_white" />
             <RelativeLayout
-                style="@style/MatchHeight_33"
+                style="@style/MatchHeight_34"
                 android:background="@color/gray_f1f1f5"
                 android:paddingLeft="@dimen/margin_15"
                 android:paddingRight="@dimen/margin_15"
                 android:gravity="center_vertical"
                 >
                 <TextView
-                    style="@style/text_12_gray_969696"
+                    style="@style/text_13_gray_969696"
                     android:layout_alignParentLeft="true"
                     android:text="@string/date_repayment"
                     />
                 <TextView
-                    style="@style/text_12_gray_969696"
+                    style="@style/text_13_gray_969696"
                     android:layout_alignParentRight="true"
                     android:text="@string/date_repayment"
                     />
             </RelativeLayout>
             <include layout="@layout/include_line_white" />
             <RelativeLayout
-                style="@style/MatchHeight_33"
+                style="@style/MatchHeight_34"
                 android:background="@color/gray_ececf6"
                 android:paddingLeft="@dimen/margin_15"
                 android:paddingRight="@dimen/margin_15"
                 android:gravity="center_vertical"
                 >
                 <TextView
-                    style="@style/text_12_gray_969696"
+                    style="@style/text_13_gray_969696"
                     android:layout_alignParentLeft="true"
                     android:text="@string/repayment_date"
                     />
                 <TextView
-                    style="@style/text_12_gray_969696"
+                    style="@style/text_13_gray_969696"
                     android:layout_alignParentRight="true"
                     android:text="@string/repayment_date"
                     />
@@ -334,8 +296,8 @@
             android:id="@+id/lin_agree"
             android:layout_below="@+id/lin_borrow_info"
             style="@style/WrapWrap.Horizontal"
-            android:layout_marginLeft="@dimen/margin_25"
-            android:layout_marginTop="@dimen/margin_12">
+            android:layout_marginLeft="@dimen/distance_30"
+            android:layout_marginTop="@dimen/margin_15">
             <CheckBox
                 android:id="@+id/checkbox"
                 android:layout_width="15dp"
@@ -357,13 +319,13 @@
         <Button
             android:id="@+id/btn_next"
             android:layout_below="@+id/lin_agree"
-            style="@style/text_16_white"
-            android:layout_marginTop="@dimen/margin_25"
-            android:layout_marginBottom="@dimen/margin_20"
-            android:layout_marginRight="@dimen/margin_25"
-            android:layout_marginLeft="@dimen/margin_25"
+            style="@style/text_18_white"
+            android:layout_marginTop="@dimen/margin_36"
+            android:layout_marginBottom="@dimen/margin_25"
+            android:layout_marginRight="@dimen/distance_30"
+            android:layout_marginLeft="@dimen/distance_30"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/margin_40"
+            android:layout_height="@dimen/btn_height_45"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/btn_blue"
             android:text="@string/sure_borrow" />
