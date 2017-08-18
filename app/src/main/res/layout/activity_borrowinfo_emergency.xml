@@ -20,6 +20,7 @@
         android:layout_below="@+id/lin_step"
         style="@style/text_15_black_000000"
         android:drawableLeft="@drawable/blue"
+        android:drawablePadding="@dimen/margin_5"
         android:layout_marginLeft="@dimen/margin_22"
         android:layout_marginTop="@dimen/margin_25"
         android:text="@string/emergency"
@@ -52,7 +53,7 @@
             android:layout_marginRight="@dimen/margin_5"
             android:layout_marginTop="@dimen/margin_10"
             android:orientation="horizontal">
-            <EditText
+            <TextView
                 android:id="@+id/et_people_number"
                 style="@style/edit_text_14"
                 android:layout_width="match_parent"
@@ -69,7 +70,7 @@
             android:layout_marginRight="@dimen/margin_5"
             android:layout_marginTop="@dimen/margin_10"
             android:orientation="horizontal">
-            <EditText
+            <TextView
                 android:id="@+id/et_relation"
                 style="@style/edit_text_14"
                 android:layout_width="match_parent"

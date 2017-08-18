@@ -24,27 +24,65 @@
         android:layout_marginRight="@dimen/distance_30"
         >
 
-        <TextView
-            android:id="@+id/tv_identity"
-            style="@style/text_14_black_000000_55"
-            android:gravity="center_vertical"
-            android:drawableRight="@drawable/arrow"
-            android:text="@string/identity" />
-        <include layout="@layout/include_line" />
-        <TextView
-            android:id="@+id/tv_emergency"
-            style="@style/text_14_black_000000_55"
-            android:gravity="center_vertical"
-            android:drawableRight="@drawable/arrow"
-            android:text="@string/emergency_people" />
-
-            <include layout="@layout/include_line" />
+        <LinearLayout
+            android:id="@+id/lin_identity"
+            style="@style/MatchHeight_55.Horizontal"
+            android:gravity="center_vertical">
             <TextView
-                android:id="@+id/tv_otherinfo"
-                style="@style/text_14_black_000000_55"
-                android:gravity="center_vertical"
-                android:drawableRight="@drawable/arrow"
+                style="@style/text_14_black_000000"
+                android:layout_weight="7"
+                android:text="@string/identity" />
+            <TextView
+                android:id="@+id/tv_identity_state"
+                style="@style/text_14_red_f74646"
+                android:text="@string/wei_fill" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_15"
+                android:src="@drawable/arrow"/>
+        </LinearLayout>
+
+        <include layout="@layout/include_line" />
+        <LinearLayout
+            android:id="@+id/lin_emergency"
+            style="@style/MatchHeight_55.Horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                style="@style/text_14_black_000000"
+                android:layout_weight="7"
+                android:text="@string/emergency_people" />
+            <TextView
+                android:id="@+id/tv_emergency_state"
+                style="@style/text_14_red_f74646"
+                android:text="@string/wei_fill" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_15"
+                android:src="@drawable/arrow"/>
+        </LinearLayout>
+
+        <include layout="@layout/include_line" />
+
+        <LinearLayout
+            android:id="@+id/lin_otherinfo"
+            style="@style/MatchHeight_55.Horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                style="@style/text_14_black_000000"
+                android:layout_weight="7"
                 android:text="@string/other_info" />
+            <TextView
+                android:id="@+id/tv_otherinfo_state"
+                style="@style/text_14_red_f74646"
+                android:text="@string/wei_fill" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_15"
+                android:src="@drawable/arrow"/>
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -63,17 +101,26 @@
         style="@style/MatchWrap.Vertical"
         android:layout_marginLeft="@dimen/distance_30"
         android:layout_marginRight="@dimen/distance_30" >
-        <TextView
-            android:id="@+id/tv_undetermined"
-            style="@style/text_14_black_000000_55"
-            android:gravity="center_vertical"
-            android:drawableRight="@drawable/arrow"
-            android:text="@string/undetermined" />
-
+        <LinearLayout
+            android:id="@+id/lin_undetermined"
+            style="@style/MatchHeight_55.Horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                style="@style/text_14_black_000000"
+                android:layout_weight="7"
+                android:text="@string/undetermined" />
+            <TextView
+                android:id="@+id/tv_undetermined_state"
+                style="@style/text_14_red_f74646"
+                android:text="@string/wei_fill" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_15"
+                android:src="@drawable/arrow"/>
+        </LinearLayout>
         <include layout="@layout/include_line" />
-
     </LinearLayout>
-
 
     <Button
         android:id="@+id/btn_bind_card"

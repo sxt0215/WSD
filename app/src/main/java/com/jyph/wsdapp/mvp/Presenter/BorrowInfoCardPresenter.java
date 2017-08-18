@@ -1,9 +1,8 @@
-package com.jyph.wsdapp.mvp.Presenter;
+package com.jyph.wsdapp.mvp.presenter;
 
 import android.content.Context;
 
 import com.jyph.wsdapp.basemvp.presenter.base.BasePresenter;
-import com.jyph.wsdapp.basemvp.view.base.BaseActivity;
 import com.jyph.wsdapp.mvp.model.BorrowInfoCardModel;
 import com.jyph.wsdapp.mvp.view.activity.BorrowInfoCardActivity;
 

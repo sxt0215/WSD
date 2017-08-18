@@ -53,6 +53,11 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/margin_55</item>
     </style>
+    <style name="MatchHeight_55.Horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/margin_55</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
 
 
 

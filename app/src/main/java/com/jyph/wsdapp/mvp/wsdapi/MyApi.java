@@ -2,6 +2,7 @@ package com.jyph.wsdapp.mvp.wsdapi;
 
 import com.jyph.wsdapp.common.bean.BaseInfo;
 import com.jyph.wsdapp.common.bean.LoginInfo;
+import com.jyph.wsdapp.common.bean.UserDataProgress;
 
 import io.reactivex.Observable;
 import retrofit2.http.GET;
@@ -28,6 +29,15 @@ public interface MyApi {
             @Query("code") String code,
             @Query("source") String source
     );
+    /**
+     * 检查用户资料完善情况
+     * */
+    @GET(MyApiConstants.API_CHECK_UESRINFO)
+    Observable<UserDataProgress> getUserData(
+
+    );
+
+
 
 
 

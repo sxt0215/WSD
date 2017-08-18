@@ -1,4 +1,4 @@
-package com.jyph.wsdapp.mvp.Presenter;
+package com.jyph.wsdapp.mvp.presenter;
 
 import android.content.Context;
 

@@ -1,166 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/MatchMatch">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchMatch.Vertical">
+    <include
+        android:id="@+id/in_title"
+        layout="@layout/titlebar_white" />
 
-    <RelativeLayout
-        style="@style/MatchMatch"
-        android:background="@color/white_ffffff">
+    <ScrollView
+        style="@style/MatchMatch">
+        <RelativeLayout
+            style="@style/MatchMatch"
+            android:background="@color/white_ffffff">
 
-        <include
-            android:id="@+id/in_title"
-            layout="@layout/titlebar_white" />
-        <LinearLayout
-            android:id="@+id/lin_step"
-            style="@style/MatchWrap.Horizontal"
-            android:layout_below="@+id/in_title">
-            <include
-                layout="@layout/include_step"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/lin_info"
-            android:layout_below="@+id/lin_step"
-            style="@style/MatchWrap.Vertical"
-            android:layout_marginLeft="@dimen/distance_30"
-            android:layout_marginRight="@dimen/distance_30"
-            android:layout_marginTop="@dimen/margin_25"
-            >
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/margin_44"
-                android:layout_marginRight="@dimen/margin_5"
-                android:layout_marginTop="@dimen/margin_10"
-                android:orientation="horizontal">
-                <EditText
-                    android:id="@+id/et_card_name"
-                    style="@style/edit_text_13"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="@string/card_name"
+                android:id="@+id/lin_step"
+                style="@style/MatchWrap.Horizontal">
+                <include
+                    layout="@layout/include_step"
                     />
             </LinearLayout>
-            <include layout="@layout/include_line" />
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/margin_44"
-                android:layout_marginRight="@dimen/margin_5"
-                android:layout_marginTop="@dimen/margin_10"
-                android:orientation="horizontal">
-                <EditText
-                    android:id="@+id/et_id_number"
-                    style="@style/edit_text_13"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="@string/ID_number"
-                    />
-            </LinearLayout>
-            <include layout="@layout/include_line" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/margin_44"
-                android:layout_marginRight="@dimen/margin_5"
-                android:layout_marginTop="@dimen/margin_10"
-                android:orientation="horizontal">
-                <EditText
-                    android:id="@+id/et_choose_bank"
-                    style="@style/edit_text_13"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="@string/choose_bank"
-                    />
-            </LinearLayout>
-            <include layout="@layout/include_line" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/margin_44"
-                android:layout_marginRight="@dimen/margin_5"
-                android:layout_marginTop="@dimen/margin_10"
-                android:orientation="horizontal">
-                <EditText
-                    android:id="@+id/et_bank_number"
-                    style="@style/edit_text_13"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="@string/bank_number"
-                    />
-            </LinearLayout>
-            <include layout="@layout/include_line" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/margin_44"
-                android:layout_marginRight="@dimen/margin_5"
-                android:layout_marginTop="@dimen/margin_10"
-                android:orientation="horizontal">
-                <EditText
-                    android:id="@+id/et_bank_call"
-                    style="@style/edit_text_13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="5"
-                    android:hint="@string/bank_call"
-                    />
-
-                <TextView
-                    android:id="@+id/textView"
-                    style="@style/text_12_gray_bebebe"
-                    android:text="@string/quick_payment" />
-            </LinearLayout>
-            <include layout="@layout/include_line" />
-            <LinearLayout
-                style="@style/WrapWrap.Horizontal"
-                android:layout_marginTop="@dimen/margin_12">
-                <CheckBox
-                    android:id="@+id/checkbox"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:layout_marginRight="@dimen/margin_4"
-                    android:background="@drawable/checkbox_protocol_selector"
-                    android:layout_centerVertical="true"
-                    android:button="@null"
-                    android:checked="true" />
-                <TextView
-                    style="@style/text_12_black_5a5a5a"
-                    android:gravity="center_vertical"
-                    android:text="@string/agree"
-                    />
-                <TextView
-                    style="@style/text_12_blue_436dc7"
-                    android:text="@string/agree_info"/>
-            </LinearLayout>
-            <LinearLayout
+                android:id="@+id/lin_info"
                 style="@style/MatchWrap.Vertical"
-                android:layout_marginTop="@dimen/margin_10">
-                <TextView
-                    style="@style/text_12_yellow_ffb319"
-                    android:text="@string/explain_one"/>
-                <TextView
-                    style="@style/text_12_yellow_ffb319"
-                    android:layout_marginTop="@dimen/margin_7"
-                    android:text="@string/explain_two"/>
-                <TextView
-                    style="@style/text_12_yellow_ffb319"
-                    android:layout_marginTop="@dimen/margin_7"
-                    android:text="@string/explain_three"/>
-                <TextView
-                    style="@style/text_12_yellow_ffb319"
-                    android:layout_marginTop="@dimen/margin_7"
-                    android:text="@string/explain_four"/>
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_below="@+id/lin_step"
+                android:layout_alignLeft="@+id/btn_bind_card"
+                android:layout_alignStart="@+id/btn_bind_card">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_44"
+                    android:layout_marginRight="@dimen/margin_5"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/et_card_name"
+                        style="@style/edit_text_13"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/card_name"
+                        />
+                </LinearLayout>
+                <include layout="@layout/include_line" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_44"
+                    android:layout_marginRight="@dimen/margin_5"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/et_id_number"
+                        style="@style/edit_text_13"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="number"
+                        android:hint="@string/ID_number"
+                        />
+                </LinearLayout>
+                <include layout="@layout/include_line" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_44"
+                    android:layout_marginRight="@dimen/margin_5"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/et_choose_bank"
+                        style="@style/edit_text_13"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/choose_bank"
+                        />
+                </LinearLayout>
+                <include layout="@layout/include_line" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_44"
+                    android:layout_marginRight="@dimen/margin_5"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/et_bank_number"
+                        style="@style/edit_text_13"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="number"
+                        android:hint="@string/bank_number"
+                        />
+                </LinearLayout>
+                <include layout="@layout/include_line" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_44"
+                    android:layout_marginRight="@dimen/margin_5"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/et_bank_call"
+                        style="@style/edit_text_13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:inputType="number"
+                        android:layout_weight="5"
+                        android:hint="@string/bank_call"
+                        />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        style="@style/text_12_gray_bebebe"
+                        android:text="@string/quick_payment" />
+                </LinearLayout>
+                <include layout="@layout/include_line" />
+                <LinearLayout
+                    style="@style/WrapWrap.Horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/margin_12">
+                    <CheckBox
+                        android:id="@+id/checkbox"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="@dimen/margin_4"
+                        android:background="@drawable/checkbox_protocol_selector"
+                        android:layout_centerVertical="true"
+                        android:button="@null"
+                        android:checked="true" />
+                    <TextView
+                        style="@style/text_12_black_5a5a5a"
+                        android:gravity="center_vertical"
+                        android:text="@string/agree"
+                        />
+                    <TextView
+                        style="@style/text_12_blue_436dc7"
+                        android:text="@string/agree_info"/>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/MatchWrap.Vertical"
+                    android:layout_marginTop="@dimen/margin_10">
+                    <TextView
+                        style="@style/text_12_yellow_ffb319"
+                        android:text="@string/explain_one"/>
+                    <TextView
+                        style="@style/text_12_yellow_ffb319"
+                        android:layout_marginTop="@dimen/margin_7"
+                        android:text="@string/explain_two"/>
+                    <TextView
+                        style="@style/text_12_yellow_ffb319"
+                        android:layout_marginTop="@dimen/margin_7"
+                        android:text="@string/explain_three"/>
+                    <TextView
+                        style="@style/text_12_yellow_ffb319"
+                        android:layout_marginTop="@dimen/margin_7"
+                        android:text="@string/explain_four"/>
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
 
-        <Button
-            android:id="@+id/btn_bind_card"
-            style="@style/text_18_white"
-            android:layout_below="@+id/lin_info"
-            android:layout_marginTop="@dimen/margin_25"
-            android:layout_marginBottom="@dimen/margin_25"
-            android:layout_marginRight="@dimen/distance_30"
-            android:layout_marginLeft="@dimen/distance_30"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/btn_height_45"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/btn_blue"
-            android:text="@string/bind_card" />
-    </RelativeLayout>
-
-</ScrollView>
+            <Button
+                android:id="@+id/btn_bind_card"
+                style="@style/text_18_white"
+                android:layout_below="@+id/lin_info"
+                android:layout_marginTop="@dimen/margin_25"
+                android:layout_marginBottom="@dimen/margin_25"
+                android:layout_marginRight="@dimen/distance_30"
+                android:layout_marginLeft="@dimen/distance_30"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height_45"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/btn_blue"
+                android:text="@string/bind_card" />
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

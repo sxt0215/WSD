@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
    style="@style/MatchWrap.Horizontal"
     android:id="@+id/lin_step"
-    android:layout_marginTop="@dimen/margin_30"
+    android:layout_marginTop="@dimen/margin_25"
     android:gravity="center"
     >
     <ImageView

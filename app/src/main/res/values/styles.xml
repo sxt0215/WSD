@@ -66,6 +66,10 @@
         <item name="android:textSize">@dimen/text_14</item>
         <item name="android:textColor">@color/black_000000</item>
     </style>
+    <style name="text_14_red_f74646" parent="WrapWrap">
+        <item name="android:textSize">@dimen/text_14</item>
+        <item name="android:textColor">@color/red_f74646</item>
+    </style>
     <style name="text_13_gray_969696" parent="WrapWrap">
         <item name="android:textSize">@dimen/text_13</item>
         <item name="android:textColor">@color/gray_969696</item>

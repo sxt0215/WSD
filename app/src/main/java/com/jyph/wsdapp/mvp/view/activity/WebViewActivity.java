@@ -26,7 +26,7 @@ import com.jyph.wsdapp.R;
 import com.jyph.wsdapp.basemvp.view.base.BaseActivity;
 import com.jyph.wsdapp.common.network.ApiSettings;
 import com.jyph.wsdapp.common.utils.LogMe;
-import com.jyph.wsdapp.mvp.Presenter.WebViewPresenter;
+import com.jyph.wsdapp.mvp.presenter.WebViewPresenter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

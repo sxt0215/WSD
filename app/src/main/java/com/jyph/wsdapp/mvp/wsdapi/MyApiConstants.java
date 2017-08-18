@@ -6,7 +6,7 @@ package com.jyph.wsdapp.mvp.wsdapi;
  */
 public class MyApiConstants {
     //测试环境  https://lmjf.uats.cc/   rapapi.org/mockjs/23852
-    public final static String IP_UAT = "http://rapapi.org/mockjs/";
+    public final static String IP_UAT = "http://rapapi.org/mockjs/23852/";
     public final static String IP_UAT_V2 = "https://lmjf.uats.cc/api/v2/";
     public final static String CLIENT_ID_UAT = "client-id-for-mobile-dev";
     public final static String CLIENT_SECRET_UAT = "client-secret-for-mobile-dev";
@@ -26,7 +26,12 @@ public class MyApiConstants {
     /**
      * 登录接口
      * */
-    public final static String API_LOGIN = "23852/wsd/login";
+    public final static String API_LOGIN = "wsd/login";
+
+    /**
+     * 检查用户信息完善情况
+     * */
+    public final static String API_CHECK_UESRINFO = "borrowInfo/progress";
 
 
 

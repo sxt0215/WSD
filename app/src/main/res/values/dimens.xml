@@ -29,6 +29,8 @@
     <dimen name="margin_51">51dp</dimen>
     <dimen name="margin_45">45dp</dimen>
     <dimen name="margin_90">90dp</dimen>
+    <dimen name="margin_100">100dp</dimen>
+    <dimen name="margin_145">145dp</dimen>
 
 
 

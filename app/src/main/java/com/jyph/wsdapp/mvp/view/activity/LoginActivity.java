@@ -19,8 +19,7 @@ import android.widget.TextView;
 import com.jyph.wsdapp.R;
 import com.jyph.wsdapp.basemvp.view.base.BaseActivity;
 import com.jyph.wsdapp.common.utils.view.ClearEditText;
-import com.jyph.wsdapp.mvp.Presenter.BorrowInfoGuidePresenter;
-import com.jyph.wsdapp.mvp.Presenter.LoginPresenter;
+import com.jyph.wsdapp.mvp.presenter.LoginPresenter;
 
 import java.util.List;
 
@@ -36,8 +35,6 @@ import butterknife.OnClick;
 
 public class LoginActivity extends BaseActivity<LoginPresenter> {
 
-    @BindView(R.id.cutline)
-    View cutline;
     @BindView(R.id.img_left)
     ImageView imgLeft;
     @BindView(R.id.et_login_account)

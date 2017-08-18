@@ -6,7 +6,7 @@
 
         <!--一条灰色线-->
         <View
-            android:id="@+id/cutline"
+            android:id="@+id/view_line"
             style="@style/MatchOne"
             android:background="@color/gray_bababa"
             android:visibility="gone"

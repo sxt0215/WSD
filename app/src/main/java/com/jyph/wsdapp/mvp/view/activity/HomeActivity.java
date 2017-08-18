@@ -8,7 +8,7 @@ import android.widget.TextView;
 import com.jyph.wsdapp.R;
 import com.jyph.wsdapp.basemvp.view.base.BaseActivity;
 import com.jyph.wsdapp.common.utils.view.CarouselPicker;
-import com.jyph.wsdapp.mvp.Presenter.HomePresenter;
+import com.jyph.wsdapp.mvp.presenter.HomePresenter;
 
 import java.util.ArrayList;
 import java.util.List;
