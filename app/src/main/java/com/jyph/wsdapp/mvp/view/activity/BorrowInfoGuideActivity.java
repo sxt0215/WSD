@@ -36,6 +36,7 @@ public class BorrowInfoGuideActivity extends BaseActivity<BorrowInfoGuidePresent
     @BindView(R.id.btn_bind_card)
     Button btnBindCard;
     MySharePreference mSharePreference;
+    private boolean money;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,13 +44,19 @@ public class BorrowInfoGuideActivity extends BaseActivity<BorrowInfoGuidePresent
         setContentView(R.layout.activity_borrowinfo_guide);
         ButterKnife.bind(this);
         initView();
+        getPresenter().getBorrowInfo("123456");//用户id
     }
 
     private void initView(){
         imgLeft.setImageResource(R.drawable.back);
         textViews.get(0).setText(R.string.fill_data);
+        getIntents();
         mSharePreference = MyApplicationLike.getInstance().getSharePreference();
         checkState();
+    }
+
+    private void getIntents() {
+        money = getIntent().getBooleanExtra("from",false);
     }
 
     private void checkState(){
@@ -109,4 +116,5 @@ public class BorrowInfoGuideActivity extends BaseActivity<BorrowInfoGuidePresent
     public BorrowInfoGuidePresenter bindPresenter() {
         return new BorrowInfoGuidePresenter(getApplicationContext());
     }
+
 }

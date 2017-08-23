@@ -19,6 +19,7 @@ import android.widget.TextView;
 import com.jyph.wsdapp.R;
 import com.jyph.wsdapp.basemvp.view.base.BaseActivity;
 import com.jyph.wsdapp.common.utils.view.ClearEditText;
+import com.jyph.wsdapp.common.utils.view.TextImageButton;
 import com.jyph.wsdapp.mvp.presenter.LoginPresenter;
 
 import java.util.List;
@@ -45,8 +46,10 @@ public class LoginActivity extends BaseActivity<LoginPresenter> {
     Button btnLogin;
     @BindViews({R.id.btn_get_code, R.id.tv_phone, R.id.tv_use_agree})
     List<TextView> btnGetCode;//, tvPhone, tvUseAgree
+    @BindView(R.id.tib_code)
+    TextImageButton tibCode;
     private CountDownTask task;
-    private String useMobile ,imgCode,smsCode;
+    private String useMobile, imgCode, smsCode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,15 +59,14 @@ public class LoginActivity extends BaseActivity<LoginPresenter> {
 
     }
 
-
-    @OnClick({R.id.img_left, R.id.btn_login, R.id.btn_get_code, R.id.tv_phone, R.id.tv_use_agree})
+    @OnClick({R.id.img_left, R.id.btn_login, R.id.btn_get_code, R.id.tv_phone, R.id.tv_use_agree,R.id.tib_code})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.img_left://暂定跳到首页（后期从哪来回哪去）
                 startActivity(new Intent(this, HomeActivity.class));
                 break;
             case R.id.btn_login://登陆  暂定跳到信息完善页面（后期从哪来回哪去）
-                getPresenter().getLogin(etLoginAccount.getText().toString(),codes.get(0).getText().toString(),codes.get(1).getText().toString());
+                getPresenter().getLogin(etLoginAccount.getText().toString(), codes.get(0).getText().toString(), codes.get(1).getText().toString());
                 break;
             case R.id.btn_get_code://点击发送短信验证码 60s 倒计时
 //                getPresenter().getRegisterSmsCode("手机号");
@@ -78,14 +80,19 @@ public class LoginActivity extends BaseActivity<LoginPresenter> {
                 showSystemShortToast("进到用户协议页面");
                 setProtocol(btnGetCode.get(2), getString(R.string.agreement));
                 break;
+            case R.id.tib_code:
+                //发送获取验证码请求
+
+                break;
         }
     }
 
-    public void jump(){
+    public void jump() {
         startActivity(new Intent(this, BorrowInfoGuideActivity.class));
+        finish();
     }
 
-    public void toastInfo(String msg){
+    public void toastInfo(String msg) {
         showSystemShortToast(msg);
     }
 
@@ -105,6 +112,7 @@ public class LoginActivity extends BaseActivity<LoginPresenter> {
         task = new CountDownTask();
         task.execute();
     }
+
 
     /**
      * 60s 倒计时
@@ -181,9 +189,6 @@ public class LoginActivity extends BaseActivity<LoginPresenter> {
             WebViewActivity.startAc(getApplicationContext(), item, WebViewActivity.CMS_URL_PROTOCOL, getString(R.string.agreement), "", "");
         }
     }
-
-
-
 
 
 }

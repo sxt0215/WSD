@@ -33,6 +33,7 @@ import com.jyph.wsdapp.common.application.MyApplicationLike;
 import com.jyph.wsdapp.common.location.LocationUtils;
 import com.jyph.wsdapp.common.utils.LogMe;
 import com.jyph.wsdapp.common.utils.phoneinfo.ContactInfo;
+import com.jyph.wsdapp.common.utils.phoneinfo.CreateFiles;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -135,7 +136,15 @@ public class MainActivity extends BaseActivity implements View.OnClickListener,E
                 getCamera();
                 break;
             case R.id.tv_phonebook_all:
-                ed_phonebook_all.setText(ContactInfo.getContact(context));
+                String info = ContactInfo.getContact(context);
+                ed_phonebook_all.setText(info);
+//                String filePath = "/sdcard/Test";
+                String fileName = "abc.txt";
+                //读写/data/data/<应用程序名>目录下的
+//                CreateFiles.writeFile(fileName,info,context);
+                //写数据到SD中的文件
+                CreateFiles.writeFileSdcardFile(fileName,info);
+                LogMe.d("信息","存完了？");
                 break;
             case R.id.tv_phonebook_call:
                 ed_phonebook_call.setText(ContactInfo.getCallInPhone(context));
@@ -316,6 +325,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener,E
                 ed_location.setText( best.getLatitude() +"      "+best.getLongitude());
             }
             try {
+                //获取地址名称
                 getAddress(best);
             } catch (IOException e) {
                 e.printStackTrace();

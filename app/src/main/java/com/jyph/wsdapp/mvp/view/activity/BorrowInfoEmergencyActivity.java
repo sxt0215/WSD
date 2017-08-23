@@ -199,7 +199,6 @@ public class BorrowInfoEmergencyActivity extends BaseActivity<BorrowInfoEmergenc
         configProDialog.getWindow().setWindowAnimations(R.style.main_menu_animstyle);
         configProDialog.getWindow().setLayout(getPhoneWidth(), getPhoneWidth() * 3 / 4);
         configProDialog.show();
-
     }
 
 

@@ -2,7 +2,7 @@ package com.jyph.wsdapp.mvp.wsdapi;
 
 import com.jyph.wsdapp.common.bean.BaseInfo;
 import com.jyph.wsdapp.common.bean.LoginInfo;
-import com.jyph.wsdapp.common.bean.UserDataProgress;
+import com.jyph.wsdapp.common.bean.BorrowInfo;
 
 import io.reactivex.Observable;
 import retrofit2.http.GET;
@@ -30,11 +30,11 @@ public interface MyApi {
             @Query("source") String source
     );
     /**
-     * 检查用户资料完善情况
+     * 用户借款资料完善情况
      * */
-    @GET(MyApiConstants.API_CHECK_UESRINFO)
-    Observable<UserDataProgress> getUserData(
-
+    @GET(MyApiConstants.API_BORROW_INFO)
+    Observable<BorrowInfo> getBorrowInfo(
+        @Query("useId") String useId
     );
 
 

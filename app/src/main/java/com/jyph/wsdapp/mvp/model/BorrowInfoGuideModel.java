@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.jyph.wsdapp.basemvp.model.base.BaseModel;
 import com.jyph.wsdapp.common.bean.BaseInfo;
+import com.jyph.wsdapp.common.bean.BorrowInfo;
 import com.jyph.wsdapp.common.network.Api;
 import com.jyph.wsdapp.mvp.wsdapi.MyApi;
 
@@ -17,6 +18,13 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 public class BorrowInfoGuideModel extends BaseModel {
     public BorrowInfoGuideModel(Context context) {
         super(context);
+    }
+
+    public Observable<BorrowInfo> getBorrowInfo(String userId){
+        return  Api.getInstance().getRetrofit()
+                .create(MyApi.class)
+                .getBorrowInfo(userId)
+                .observeOn(AndroidSchedulers.mainThread());
     }
 
 

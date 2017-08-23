@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/MatchMatch.Vertical"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
     android:background="@color/white_ffffff">
     <include layout="@layout/titlebar_white" />
     <ImageView
@@ -53,6 +54,17 @@
                 android:imeOptions="actionNext"
                 android:nextFocusForward="@+id/et_sms_code"
                 android:maxLength="6" />
+
+            <com.jyph.wsdapp.common.utils.view.TextImageButton
+                android:id="@+id/tib_code"
+                android:layout_width="@dimen/margin_90"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/margin_5"
+                android:background="@drawable/btnimage"
+                android_custom:ibText="获取图形码"
+                android_custom:ibTextColor="@color/white_ffffff"
+                android_custom:ibTextSize="15sp" />
 
         </LinearLayout>
 

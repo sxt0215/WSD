@@ -29,9 +29,9 @@ public class MyApiConstants {
     public final static String API_LOGIN = "wsd/login";
 
     /**
-     * 检查用户信息完善情况
+     * 用户借款信息完善情况
      * */
-    public final static String API_CHECK_UESRINFO = "borrowInfo/progress";
+    public final static String API_BORROW_INFO = "borrow/information";
 
 
 

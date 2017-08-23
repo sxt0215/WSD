@@ -3,6 +3,7 @@ package com.jyph.wsdapp.mvp.view.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
@@ -13,8 +14,13 @@ import android.widget.TextView;
 
 import com.jyph.wsdapp.R;
 import com.jyph.wsdapp.basemvp.view.base.BaseActivity;
+import com.jyph.wsdapp.common.utils.LogMe;
+import com.jyph.wsdapp.common.utils.view.CommonPickerDialog;
 import com.jyph.wsdapp.mvp.presenter.BorrowInfoBindCardPresenter;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 
 import butterknife.BindView;
@@ -43,6 +49,10 @@ public class BorrowInfoBindCardActivity extends BaseActivity<BorrowInfoBindCardP
     private String cardName, idNumber, choseBank, bankNumber, bankCall;
     private boolean source;
 
+    private List<String> bankNameList = new ArrayList<String>();
+    private List<String> bankCodeList = new ArrayList<String>();
+    private String bankCode;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +66,10 @@ public class BorrowInfoBindCardActivity extends BaseActivity<BorrowInfoBindCardP
         imageViews.get(0).setImageResource(R.drawable.back);
         textViews.get(0).setText(R.string.fill_data);
         getIntents();
+        editTexts.get(2).setInputType(InputType.TYPE_NULL);
+        Collections.addAll(bankNameList, getResources().getStringArray(R.array.bank_name));
+        Collections.addAll(bankCodeList, getResources().getStringArray(R.array.bank_code));
+
         if (source) {//true  从下一页点击修改过来
             editTexts.get(0).setText(cardName);
             editTexts.get(0).setInputType(InputType.TYPE_NULL);
@@ -116,7 +130,7 @@ public class BorrowInfoBindCardActivity extends BaseActivity<BorrowInfoBindCardP
         return new BorrowInfoBindCardPresenter(getApplicationContext());
     }
 
-    @OnClick({R.id.img_left, R.id.btn_bind_card})
+    @OnClick({R.id.img_left, R.id.btn_bind_card,R.id.et_choose_bank})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.img_left:
@@ -131,9 +145,43 @@ public class BorrowInfoBindCardActivity extends BaseActivity<BorrowInfoBindCardP
                     intent.putExtra("bankNumber", bankNumber);
                     intent.putExtra("bankCall", bankCall);
                     this.startActivity(intent);
+                    finish();
                 }
                 break;
+            case R.id.et_choose_bank://弹出银行列表
+                showBankList(bankNameList);
+                break;
         }
+    }
+
+    /**
+     * 显示银行列表弹窗
+     *
+     * @param bankList
+     */
+    public void showBankList(List<String> bankList) {
+        final List<String> bankListBak = new ArrayList<String>(bankList);
+        CommonPickerDialog configProDialog = new CommonPickerDialog(this, "",
+                new CommonPickerDialog.onCommonSelectedListener() {
+                    @Override
+                    public void callBack(HashMap<Integer, String> map) {
+                        // TODO Auto-generated method stub
+                        int i = -1;
+                        for (i = 0; i < bankList.size(); i++) {
+                            if (map.get(0).equals(bankList.get(i))) {
+                                break;
+                            }
+                        }
+                        editTexts.get(2).setText(map.get(0));
+                        editTexts.get(2).setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black_000000));
+                        bankCode = bankCodeList.get(i);
+                        LogMe.d("jobCode", map.get(0) + "index:" + i);
+                    }
+                }, bankListBak);
+        configProDialog.setDefaultSetting();
+        configProDialog.getWindow().setWindowAnimations(R.style.main_menu_animstyle);
+        configProDialog.getWindow().setLayout(getPhoneWidth(), getPhoneWidth() * 3 / 4);
+        configProDialog.show();
     }
 
 

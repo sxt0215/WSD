@@ -48,6 +48,7 @@ public class BorrowMoneyActivity extends BaseActivity<BorrowMoneyPresenter> {
     @BindView(R.id.view_line)
     View viewLine;
     private CountDownTask task;
+    private boolean money = true;
 
     private String cardName, idNumber, choseBank, bankNumber, bankCall;
 
@@ -74,7 +75,7 @@ public class BorrowMoneyActivity extends BaseActivity<BorrowMoneyPresenter> {
         editTexts.get(0).setInputType(InputType.TYPE_NULL);
         editTexts.get(1).setText(bankCall);
         editTexts.get(1).setInputType(InputType.TYPE_NULL);
-
+        //还需要判断下是从列表页进来还是从绑卡页进来  绑卡页立即发送验证码  列表页则需要点击出发进行倒计时
         startCounting();
     }
 
@@ -103,11 +104,21 @@ public class BorrowMoneyActivity extends BaseActivity<BorrowMoneyPresenter> {
         this.startActivity(intent);
     }
 
+    private boolean check(){
+        if("".equals(editTexts.get(2).getText().toString())){
+            return false;
+        }
+        if (checkbox.isChecked()) {
+            showSystemToast("请同意协议");
+            return false;
+        }
+        return true;
+    }
+
     @OnClick({R.id.img_left, R.id.img_id_alter, R.id.img_call_alter, R.id.btn_get_code, R.id.lin_agree, R.id.btn_next})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.img_left:
-                startActivity(new Intent(this,BorrowInfoGuideActivity.class));
                 finish();
                 break;
             case R.id.img_id_alter://修改卡号
@@ -123,7 +134,12 @@ public class BorrowMoneyActivity extends BaseActivity<BorrowMoneyPresenter> {
             case R.id.lin_agree:
                 break;
             case R.id.btn_next:
-
+                if(check()){
+                    showSystemToast("发送请求，并根据结果给相应提示");
+                    //借款成功回到首页 并结束该页面  在用户还款成功进行二次借款时会进入该页面   且验证码需要用户手动触发
+                    startActivity( new Intent(this,MainActivity.class));
+                    finish();
+                }
                 break;
         }
     }
@@ -136,6 +152,7 @@ public class BorrowMoneyActivity extends BaseActivity<BorrowMoneyPresenter> {
     }
 
     public void startCounting() {
+        showSystemToast("短信验证码已发送");
         task = new CountDownTask();
         task.execute();
     }
