@@ -1,4 +1,4 @@
-package com.jyph.wsdapp.common.utils.phoneinfo;
+package com.jyph.wsdapp.common.utils.file;
 
 import android.os.Environment;
 

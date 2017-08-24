@@ -28,12 +28,11 @@ import android.widget.Toast;
 
 import com.jyph.wsdapp.R;
 import com.jyph.wsdapp.basemvp.view.base.BaseActivity;
-import com.jyph.wsdapp.common.application.MyApplication;
 import com.jyph.wsdapp.common.application.MyApplicationLike;
 import com.jyph.wsdapp.common.location.LocationUtils;
 import com.jyph.wsdapp.common.utils.LogMe;
 import com.jyph.wsdapp.common.utils.phoneinfo.ContactInfo;
-import com.jyph.wsdapp.common.utils.phoneinfo.CreateFiles;
+import com.jyph.wsdapp.common.utils.file.CreateFiles;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -139,12 +138,21 @@ public class MainActivity extends BaseActivity implements View.OnClickListener,E
                 String info = ContactInfo.getContact(context);
                 ed_phonebook_all.setText(info);
 //                String filePath = "/sdcard/Test";
-                String fileName = "abc.txt";
+                String fileName = "ffff.txt";
                 //读写/data/data/<应用程序名>目录下的
 //                CreateFiles.writeFile(fileName,info,context);
                 //写数据到SD中的文件
-                CreateFiles.writeFileSdcardFile(fileName,info);
-                LogMe.d("信息","存完了？");
+                CreateFiles.writeFile(fileName,info,context);
+                try {
+                    CreateFiles.savaFileToSD(fileName,info,context);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    LogMe.d("读取出的数据",CreateFiles.readFromSD(fileName));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 break;
             case R.id.tv_phonebook_call:
                 ed_phonebook_call.setText(ContactInfo.getCallInPhone(context));

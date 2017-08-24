@@ -1,7 +1,9 @@
-package com.jyph.wsdapp.common.utils.phoneinfo;
+package com.jyph.wsdapp.common.utils.file;
 
 import android.text.TextUtils;
 import android.util.Log;
+
+import com.jyph.wsdapp.common.utils.file.FileUtils;
 
 import java.io.BufferedReader;
 import java.io.File;

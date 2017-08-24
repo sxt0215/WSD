@@ -178,9 +178,6 @@ public class ContactInfo {
         return smsBuilder.toString();
     }
 
-
-
-
     /**
      * 获取通话记录
      * */
@@ -204,7 +201,6 @@ public class ContactInfo {
         int count = 0;
         String strPhone = "";
         String date;
-
         while (hasRecord){
             int type = cursor.getInt(cursor.getColumnIndex(CallLog.Calls.TYPE));
             long duration = cursor.getLong(cursor.getColumnIndex(CallLog.Calls.DURATION));
@@ -212,11 +208,9 @@ public class ContactInfo {
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
             Date d = new Date(Long.parseLong(cursor.getString(cursor.getColumnIndex(CallLog.Calls.DATE))));
             date = dateFormat.format(d);
-
             result = result + "phone :" + strPhone + ",";
             result = result + "date :" + date + ",";
             result = result + "time :" + duration + ",";
-
             switch (type){
                 case CallLog.Calls.INCOMING_TYPE:
                     result = result + "type:呼入";
@@ -251,7 +245,6 @@ public class ContactInfo {
             //获取联系人的ID索引
             String contactId = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts._ID));
             //查询该联系人的电话号码，类似的可以查询email phono
-
             Cursor phone = resolver.query(//第一个参数是确定查询电话号，第三个是查询具体某个人的过滤值
                     ContactsContract.CommonDataKinds.Phone.CONTENT_URI,null,
                     ContactsContract.CommonDataKinds.Phone.CONTACT_ID+"="+contactId,null,null);
@@ -260,8 +253,7 @@ public class ContactInfo {
                 String strPhoneNumber = phone.getString(phone.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
                 string = string + strPhoneNumber+";";
             }
-
-            string += "\n";
+            string += "\r\n";
             count ++ ;
             phone.close();
         }

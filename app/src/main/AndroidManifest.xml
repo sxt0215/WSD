@@ -30,6 +30,7 @@
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-configuration android:name = "android.permission.READ_CALL_LOG"/>
+    <uses-configuration android:name = "android.permission.PERMISSION_GRANTED"/>
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.WRITE_SMS" />
