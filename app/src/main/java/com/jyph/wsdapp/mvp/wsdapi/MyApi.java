@@ -4,9 +4,20 @@ import com.jyph.wsdapp.common.bean.BaseInfo;
 import com.jyph.wsdapp.common.bean.LoginInfo;
 import com.jyph.wsdapp.common.bean.BorrowInfo;
 
+import java.util.Map;
+
 import io.reactivex.Observable;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Multipart;
+import retrofit2.http.POST;
+import retrofit2.http.Part;
+import retrofit2.http.PartMap;
 import retrofit2.http.Query;
+import retrofit2.http.QueryMap;
 
 /**
  * Created by sxt on 16/12/19.
@@ -37,6 +48,15 @@ public interface MyApi {
         @Query("useId") String useId
     );
 
+    /**
+     *文件上传
+     * @Part(“description”) 就是RequestBody实例中包裹的字符串值
+     * @Part MultipartBody.Part file 我们使用MultipartBody.Part类，使我们能够发送实际文件 file就是你要往服务器上传的文件
+     * */
+    @Multipart
+    @POST(MyApiConstants.API_UP_FILE)
+    rx.Observable<ResponseBody> uploadFileInfo(@QueryMap Map<String, String> options,
+                                               @PartMap Map<String, RequestBody> externalFileParameters) ;
 
 
 

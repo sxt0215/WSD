@@ -32,7 +32,10 @@ public class MyApiConstants {
      * 用户借款信息完善情况
      * */
     public final static String API_BORROW_INFO = "borrow/information";
-
+    /**
+     * 文件上传
+     * */
+    public final static String API_UP_FILE = "upload";
 
 
 
