@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/MatchMatch"
+    android:background="@color/white_ffffff"
+    android:paddingTop="@dimen/margin_15"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/text_15_black_404040"
+        android:layout_centerHorizontal="true"
+        android:text="@string/borrow_money"/>
+    <ImageView
+        android:id="@+id/img_borrow"
+        android:layout_below="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/borrow_bottom"/>
+    <RelativeLayout
+        android:id="@+id/lin_xuan_money"
+        style="@style/MatchWrap"
+        android:layout_below="@+id/img_borrow"
+        android:layout_marginTop="@dimen/margin_26"
+        android:layout_marginRight="@dimen/margin_20"
+        android:layout_marginLeft="@dimen/margin_20"
+        >
+        <ImageView
+            android:id="@+id/img_arrow_left"
+            android:layout_width="25dp"
+            android:layout_height="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/left"/>
+
+        <com.jyph.wsdapp.common.utils.view.CarouselPicker
+            android:id="@+id/textCarousel"
+            android:layout_toRightOf="@+id/img_arrow_left"
+            android:layout_toLeftOf="@+id/img_arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:items_visible="five" />
+
+        <ImageView
+            android:id="@+id/img_arrow_right"
+            android:layout_width="25dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/right"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_borrow_time"
+        android:layout_below="@+id/lin_xuan_money"
+        style="@style/text_15_black_404040"
+        android:layout_marginTop="@dimen/margin_26"
+        android:layout_centerHorizontal="true"
+        android:text="@string/borrow_time2"/>
+
+    <LinearLayout
+        android:id="@+id/lin_tian"
+        android:layout_below="@+id/tv_borrow_time"
+        style="@style/MatchWrap.Horizontal"
+        android:layout_marginTop="@dimen/margin_25"
+        android:gravity="center_horizontal">
+        <Button
+            android:id="@+id/btn_five_days"
+            style="@style/btn_white_14_000"
+            android:text="5天" />
+        <Button
+            android:id="@+id/btn_ten_days"
+            style="@style/btn_white_14_000"
+            android:layout_marginLeft="@dimen/margin_25"
+            android:layout_marginRight="@dimen/margin_25"
+            android:text="10天"/>
+        <Button
+            android:id="@+id/btn_fifteen_days"
+            style="@style/btn_white_14_000"
+            android:text="15天"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lin_lilv"
+        android:layout_below="@+id/lin_tian"
+        style="@style/MatchWrap.Horizontal"
+        android:layout_marginTop="@dimen/margin_80">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/line"/>
+        <TextView
+            style="@style/text_12_gray_969696"
+            android:text="借款利率1%-2% / 天"
+            android:layout_marginRight="@dimen/margin_8"
+            android:layout_marginLeft="@dimen/margin_8"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/line"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_borrow_money"
+        android:layout_alignParentBottom="true"
+        style="@style/text_18_white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height_45"
+        android:layout_marginLeft="@dimen/margin_30"
+        android:layout_marginRight="@dimen/margin_30"
+        android:layout_marginBottom="@dimen/margin_30"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/btn_blue"
+        android:text="@string/liji_borrow" />
+
+</RelativeLayout>

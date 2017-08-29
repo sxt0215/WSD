@@ -137,7 +137,7 @@ public class BorrowMoneyActivity extends BaseActivity<BorrowMoneyPresenter> {
                 if(check()){
                     showSystemToast("发送请求，并根据结果给相应提示");
                     //借款成功回到首页 并结束该页面  在用户还款成功进行二次借款时会进入该页面   且验证码需要用户手动触发
-                    startActivity( new Intent(this,MainActivity.class));
+                    startActivity( new Intent(this,MainTestActivity.class));
                     finish();
                 }
                 break;

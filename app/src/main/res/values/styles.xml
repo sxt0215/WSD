@@ -54,6 +54,10 @@
         <item name="android:textSize">@dimen/text_12</item>
         <item name="android:textColor">@color/blue_436dc7</item>
     </style>
+    <style name="text_12_gray_969696" parent="WrapWrap">
+        <item name="android:textSize">@dimen/text_12</item>
+        <item name="android:textColor">@color/gray_969696</item>
+    </style>
     <style name="text_18_black_000000" parent="WrapWrap">
         <item name="android:textSize">@dimen/text_18</item>
         <item name="android:textColor">@color/black_000000</item>
@@ -90,9 +94,53 @@
         <item name="android:textSize">@dimen/text_16</item>
         <item name="android:textColor">@color/black_000000</item>
     </style>
-
-
-
+    <style name="text_24_white_ffffff" parent="WrapWrap">
+        <item name="android:textSize">@dimen/text_24</item>
+        <item name="android:textColor">@color/white_ffffff</item>
+    </style>
+    <style name="text_35_white_ffffff" parent="WrapWrap">
+        <item name="android:textSize">@dimen/text_35</item>
+        <item name="android:textColor">@color/white_ffffff</item>
+    </style>
+    <style name="text_13_white_ffffff" parent="WrapWrap">
+        <item name="android:textSize">@dimen/text_13</item>
+        <item name="android:textColor">@color/transparent_70</item>
+    </style>
+    <style name="text_14_white_ffffff" parent="WrapWrap">
+        <item name="android:textSize">@dimen/text_14</item>
+        <item name="android:textColor">@color/white_ffffff</item>
+    </style>
+    <style name="text_16_white_ffffff" parent="WrapWrap">
+        <item name="android:textSize">@dimen/text_16</item>
+        <item name="android:textColor">@color/white_ffffff</item>
+    </style>
+    <style name="text_15_black_404040" parent="WrapWrap">
+        <item name="android:textSize">@dimen/text_15</item>
+        <item name="android:textColor">@color/black_404040</item>
+    </style>
+    <style name="btn_blue_14_ffff" parent="W75H28">
+        <item name="android:textSize">@dimen/text_14</item>
+        <item name="android:textColor">@color/white_ffffff</item>
+        <item name="android:background">@drawable/btn_blue</item>
+    </style>
+    <style name="btn_gray_14_969696" parent="W75H28">
+        <item name="android:textSize">@dimen/text_14</item>
+        <item name="android:textColor">@color/gray_969696</item>
+        <item name="android:background">@drawable/btn_gray</item>
+    </style>
+    <style name="btn_white_14_000" parent="W75H28">
+        <item name="android:textSize">@dimen/text_14</item>
+        <item name="android:textColor">@color/black_000000</item>
+        <item name="android:background">@drawable/btn_white</item>
+    </style>
+    <style name="text_29_blue_3a6bd7" parent="WrapWrap">
+        <item name="android:textSize">@dimen/text_29</item>
+        <item name="android:textColor">@color/blue_3a6bd7</item>
+    </style>
+    <style name="text_16_blue_3a6bd7" parent="WrapWrap">
+        <item name="android:textSize">@dimen/text_16</item>
+        <item name="android:textColor">@color/blue_3a6bd7</item>
+    </style>
 
 
 

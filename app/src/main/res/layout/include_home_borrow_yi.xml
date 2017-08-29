@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchMatch.Vertical"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        style="@style/WrapWrap.Horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/margin_60">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/two_line"/>
+        <TextView
+            style="@style/text_16_black_000000"
+            android:text="@string/borrow_of_your"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/two_line"/>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/WrapWrap.Horizontal"
+        android:layout_marginTop="@dimen/margin_20"
+        android:background="@drawable/borrow_bg"
+        android:gravity="center"
+        >
+        <TextView
+            android:id="@+id/tv_borrow_money"
+            style="@style/text_29_blue_3a6bd7"
+            android:text="300"
+            />
+        <TextView
+            style="@style/text_16_blue_3a6bd7"
+            android:text="元"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="@dimen/margin_30"
+        style="@style/text_13_gray_969696"
+        android:text="@string/borrow_notification"/>
+    <TextView
+        android:layout_marginTop="@dimen/margin_8"
+        style="@style/text_13_gray_969696"
+        android:text="@string/borrow_jixi"/>
+
+</LinearLayout>

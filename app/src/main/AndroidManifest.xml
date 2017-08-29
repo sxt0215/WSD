@@ -85,11 +85,18 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppBlueTheme" />
         <activity
-            android:name="com.jyph.wsdapp.mvp.view.activity.MainActivity"
+            android:name="com.jyph.wsdapp.mvp.view.activity.MainTestActivity"
             android:launchMode="singleTop"
             android:configChanges="keyboardHidden|orientation|screenSize|locale"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
+            />
+        <activity
+            android:name="com.jyph.wsdapp.mvp.view.activity.MainActivity"
+            android:launchMode="singleTop"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppWhiteTheme"
             />
         <activity
             android:name="com.jyph.wsdapp.mvp.view.activity.LoginActivity"
@@ -97,12 +104,6 @@
             android:configChanges="keyboardHidden|orientation|screenSize|locale"
             android:screenOrientation="portrait"
             android:theme="@style/AppWhiteTheme" />
-        <activity
-            android:name="com.jyph.wsdapp.mvp.view.activity.HomeActivity"
-            android:launchMode="singleTop"
-            android:configChanges="keyboardHidden|orientation|screenSize|locale"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppBlueTheme" />
         <activity
             android:name="com.jyph.wsdapp.mvp.view.activity.BorrowInfoGuideActivity"
             android:launchMode="singleTop"

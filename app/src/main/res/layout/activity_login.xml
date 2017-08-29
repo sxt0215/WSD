@@ -62,7 +62,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginRight="@dimen/margin_5"
                 android:background="@drawable/btnimage"
-                android_custom:ibText="获取图形码"
+                android_custom:ibText=""
                 android_custom:ibTextColor="@color/white_ffffff"
                 android_custom:ibTextSize="15sp" />
 

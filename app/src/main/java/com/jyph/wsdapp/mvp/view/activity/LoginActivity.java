@@ -63,7 +63,7 @@ public class LoginActivity extends BaseActivity<LoginPresenter> {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.img_left://暂定跳到首页（后期从哪来回哪去）
-                startActivity(new Intent(this, HomeActivity.class));
+                startActivity(new Intent(this, MainActivity.class));
                 break;
             case R.id.btn_login://登陆  暂定跳到信息完善页面（后期从哪来回哪去）
                 getPresenter().getLogin(etLoginAccount.getText().toString(), codes.get(0).getText().toString(), codes.get(1).getText().toString());

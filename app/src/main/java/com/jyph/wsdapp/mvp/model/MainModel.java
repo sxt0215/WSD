@@ -5,11 +5,11 @@ import android.content.Context;
 import com.jyph.wsdapp.basemvp.model.base.BaseModel;
 
 /**
- * Created by sxt_0 on 2017/8/7.
+ * Created by sxt_0 on 2017/8/28.
  */
 
-public class HomeModel extends BaseModel {
-    public HomeModel(Context context) {
+public class MainModel extends BaseModel {
+    public MainModel(Context context) {
         super(context);
     }
 }

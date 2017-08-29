@@ -6,10 +6,12 @@
 
     <!-- 透明色 -->
     <color name="transparent">#00000000</color>
+    <color name="transparent_70">#e0eeeeee</color>
     <color name="white_ffffff">#ffffff</color>
     <color name="blue_436dc7">#436dc7</color>
     <color name="blue_5282ee">#5282ee</color>
     <color name="blue_386ee3">#386ee3</color>
+    <color name="blue_5283f1">#5283f1</color>
     <color name="black_000000">#000000</color>
     <color name="gray_bebebe">#bebebe</color>
     <color name="gray_bababa">#bababa</color>
@@ -24,6 +26,8 @@
     <color name="gray_ececf6">#ececf6</color>
     <color name="green_4cd194">#4cd194</color>
     <color name="red_f74646">#f74646</color>
+    <color name="black_404040">#404040</color>
+    <color name="blue_3a6bd7">#3a6bd7</color>
 
 
 

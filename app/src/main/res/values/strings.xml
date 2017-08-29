@@ -51,6 +51,7 @@
     <string name="borrow_info">借款信息</string>
     <string name="borrow_money">借款金额</string>
     <string name="borrow_time">借款期限</string>
+    <string name="borrow_time2">借款时间</string>
     <string name="account_money">账户管理费</string>
     <string name="rate">利息</string>
     <string name="pay_money">支付信审费</string>
@@ -61,6 +62,15 @@
     <string name="fill_data">填写借款资料</string>
     <string name="yi_fill">已填写</string>
     <string name="wei_fill">未填写</string>
+    <string name="available">可用额度</string>
+    <string name="card_pople">持卡人</string>
+    <string name="card_type">卡类型</string>
+    <string name="liji_borrow">立即拿钱</string>
+    <string name="borrow_of_your">你的借款</string>
+    <string name="borrow_notification">已经通过审核，请留意银行账户的余额变动通知</string>
+    <string name="borrow_jixi">银行到账后开始计息</string>
+
+
 
 
     <string name="rationale_ask_again">如果没有请求的权限，这个应用程序可能无法正常工作。打开应用程序设置界面修改应用程序权限。</string>

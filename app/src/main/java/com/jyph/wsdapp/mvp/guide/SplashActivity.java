@@ -7,11 +7,12 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
+import com.jyph.wsdapp.mvp.view.activity.MainActivity;
 import com.umeng.analytics.MobclickAgent;
 import com.jyph.wsdapp.R;
 import com.jyph.wsdapp.basemvp.view.base.BaseActivity;
 import com.jyph.wsdapp.common.sharepreference.MySharePreference;
-import com.jyph.wsdapp.mvp.view.activity.MainActivity;
+import com.jyph.wsdapp.mvp.view.activity.MainTestActivity;
 
 
 public class SplashActivity extends BaseActivity {
@@ -64,17 +65,18 @@ public class SplashActivity extends BaseActivity {
 //            if (TextUtils.isEmpty(getSharedPref().getGesture(getSharedPref().getUserId()))) {//如果手势密码为空，则进到手势密码设置页面
 //                LogMe.e("手势密码的开关==isGestureOff", getSharedPref().isGestureOpen()+"");
 ////                if (!getSharedPref().isGestureOpen()) {//为空的话，还要判断下用户是否关闭了手势密码  false  关闭了
-//                    startActivity(new Intent(this, MainActivity.class));
+//                    startActivity(new Intent(this, MainTestActivity.class));
 ////                } else {
 ////                    startActivity(new Intent(this, GestureRegisterActivity.class));
 ////                }
 //            } else {
-//                startActivity(new Intent(this, MainActivity.class));
+//                startActivity(new Intent(this, MainTestActivity.class));
 //                //手势密码
 ////                startActivity(new Intent(this, GestureBackActivity.class));
 //            }
 //        }
         else {
+//            startActivity(new Intent(this, MainTestActivity.class));
             startActivity(new Intent(this, MainActivity.class));
         }
         finish();

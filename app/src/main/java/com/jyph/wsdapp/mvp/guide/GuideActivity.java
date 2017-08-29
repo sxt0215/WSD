@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import com.jyph.wsdapp.R;
 import com.jyph.wsdapp.common.sharepreference.MySharePreference;
 import com.jyph.wsdapp.mvp.view.activity.MainActivity;
+import com.jyph.wsdapp.mvp.view.activity.MainTestActivity;
 import com.jyph.wsdapp.mvp.adapter.ViewPagerAdapter;
 
 import java.util.ArrayList;
@@ -53,6 +54,7 @@ public class GuideActivity extends Activity {
             @Override
             public void onClick(View arg0) {
                 MySharePreference.setFirstIn(GuideActivity.this);
+//                Intent i = new Intent(GuideActivity.this, MainTestActivity.class);
                 Intent i = new Intent(GuideActivity.this, MainActivity.class);
                 startActivity(i);
                 finish();

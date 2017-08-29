@@ -24,7 +24,7 @@ import java.util.List;
  */
 
 public class CarouselPicker extends ViewPager {
-    private int itemsVisible = 7;
+    private int itemsVisible = 5;
     private float divisor;
 
     public CarouselPicker(Context context) {
@@ -98,11 +98,9 @@ public class CarouselPicker extends ViewPager {
     }
 
     public static class CarouselViewAdapter extends PagerAdapter {
-
         List<PickerItem> items = new ArrayList<>();
         Context context;
         int drawable;
-
         public CarouselViewAdapter(Context context, List<PickerItem> items, int drawable) {
             this.context = context;
             this.drawable = drawable;
@@ -111,13 +109,10 @@ public class CarouselPicker extends ViewPager {
                 this.drawable = R.layout.page;
             }
         }
-
-
         @Override
         public int getCount() {
             return items.size();
         }
-
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
             View view = LayoutInflater.from(context).inflate(this.drawable, null);
@@ -144,17 +139,14 @@ public class CarouselPicker extends ViewPager {
             container.addView(view);
             return view;
         }
-
         @Override
         public void destroyItem(ViewGroup container, int position, Object object) {
             container.removeView((View) object);
         }
-
         @Override
         public boolean isViewFromObject(View view, Object object) {
             return (view == object);
         }
-
         private int dpToPx(int dp) {
             DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
             return Math.round(dp * (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT));
